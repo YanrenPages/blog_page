@@ -1,0 +1,10 @@
+<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">.heimu {
+  background: black;
+  color: black;
+  transition: color 1s;
+  width: auto;
+  height: 20px;
+}
+.heimu:hover {
+  color: white;
+}
