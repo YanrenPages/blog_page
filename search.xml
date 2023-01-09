@@ -412,24 +412,6 @@ duang~
       </tags>
   </entry>
   <entry>
-    <title>记一些 Hexo 报错</title>
-    <url>/posts/b36c6159/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote>
-<p>说在前面：
-这里主要是记一下平时在 Hexo 遇到的报错，解决之后分享一下解决方法</p>
-</blockquote>
-<h2 id="YAMLException-can-not-read-a-block-mapping-entry-a-multiline-key-may-not-be-an-implicit-key-at-line-6-column-1">YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 6, column 1</h2>
-<p>解决方法：查看新建要上传的 MarkDown 文件，看看 tags 那里或者其他地方，与后面内容是不是有一个空格。我是排查空格之后就解决了。<s>好智障啊</s></p>
-]]></content>
-      <categories>
-        <category>技术记录</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>踩坑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git 无法 Pull 仓库 显示 refusing to merge unrelated histories （拒绝合并不相关仓库）</title>
     <url>/posts/e5477819/</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>如果在合并 pull 仓库的时候，出现的问题如何去解决（这个方法适用于合并本地很久没有提交的仓库，或者是同一个仓库 commit 信息不同的合并）</p>
@@ -447,6 +429,24 @@ duang~
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一些 Hexo 报错</title>
+    <url>/posts/b36c6159/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote>
+<p>说在前面：
+这里主要是记一下平时在 Hexo 遇到的报错，解决之后分享一下解决方法</p>
+</blockquote>
+<h2 id="YAMLException-can-not-read-a-block-mapping-entry-a-multiline-key-may-not-be-an-implicit-key-at-line-6-column-1">YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 6, column 1</h2>
+<p>解决方法：查看新建要上传的 MarkDown 文件，看看 tags 那里或者其他地方，与后面内容是不是有一个空格。我是排查空格之后就解决了。<s>好智障啊</s></p>
+]]></content>
+      <categories>
+        <category>技术记录</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>踩坑</tag>
       </tags>
   </entry>
   <entry>
@@ -493,97 +493,56 @@ duang~
       </tags>
   </entry>
   <entry>
-    <title>解决方案.方案</title>
-    <url>/posts/notes/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote>
-<p>日常解决问题基本靠 Google，拿来水博客跟 <em>Copy&amp;Paste</em> 也没啥区别，但是又想把这些方法记录下来，万一以后需要用还方便查看，于是打算全部写在这一篇文章里了。</p>
-<p>当然，为了防止未来的我忘记当时写的是什么东西，咱尽量将一些因人而异、因机而异的东西标注出来（比如每段的 Replacement），但难免有疏漏，如果有读者能够看到，并感到疑惑，请不要吝啬你的留言。<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="引用自 [Buta Sticky Notes - 丁丁の店](https://blog.butanediol.me/2020/10/13/Buta-Sticky-Notes/)
-">[1]</span></a></sup></p>
-</blockquote>
-<div class="note info flat"><p>因为我是用的是 Windows 10 系统所以一下的东西只保证在 Windows 10 有用其他系统，诸如 Windows 7/Linux/macOS 请自行查找方案</p>
-</div>
-<h2 id="目前可用的-VS-Code-调试-C-C-配置">目前可用的 VS Code 调试 C/C++ 配置</h2>
-<blockquote>
-<p>2020-11-12 19:53 GMT +8<br>
-基于网上现有的稍加修改</p>
-</blockquote>
-<div class="note info flat"><p>请替换 [debugger_path] 并且保证你的 gcc 是可用状态，或者使用其他的编译器/调试器</p>
-</div>
-<p><strong><code>launch.json</code></strong></p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="comment">// 使用 IntelliSense 了解相关属性。</span></span><br><span class="line">  <span class="comment">// 悬停以查看现有属性的描述。</span></span><br><span class="line">  <span class="comment">// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2,0.0&quot;</span><span class="punctuation">,</span> <span class="comment">//配置文件的版本，以前使用是0.2.0，新版本已经弃用，改用为2.0.0</span></span><br><span class="line">  <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="comment">//配置域</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(gdb) Launch&quot;</span><span class="punctuation">,</span> <span class="comment">//配置文件的名字，可以随便起</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span> <span class="comment">//调试的类型，Vscode现在支持很多，我这里主要是C，所以只能是cppdbg</span></span><br><span class="line">      <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span> <span class="comment">//配置文件的请求类型，有launch和attach两种，具体看官方文档</span></span><br><span class="line">      <span class="attr">&quot;targetArchitecture&quot;</span><span class="punctuation">:</span> <span class="string">&quot;x64&quot;</span><span class="punctuation">,</span> <span class="comment">//硬件内核架构，为64bit，如图设置</span></span><br><span class="line">      <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceRoot&#125;/$&#123;fileBasenameNoExtension&#125;.exe&quot;</span><span class="punctuation">,</span> <span class="comment">//可执行文件的路径和文件名称</span></span><br><span class="line">      <span class="comment">//&quot;args&quot;: [&quot;file1&quot;, &quot;file2&quot;], //主函数调用时传入的参数</span></span><br><span class="line">      <span class="attr">&quot;stopAtEntry&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span> <span class="comment">//设为true时程序将暂停在程序入口处</span></span><br><span class="line">      <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span><span class="punctuation">,</span> <span class="comment">//调试时的工作目录</span></span><br><span class="line">      <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="comment">//不知道干嘛的</span></span><br><span class="line">      <span class="attr">&quot;internalConsoleOptions&quot;</span><span class="punctuation">:</span> <span class="string">&quot;openOnSessionStart&quot;</span><span class="punctuation">,</span> <span class="comment">//</span></span><br><span class="line">      <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//调试时是否显示控制台窗口</span></span><br><span class="line">      <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gdb&quot;</span><span class="punctuation">,</span> <span class="comment">//指定连接的调试器，可以省略不写</span></span><br><span class="line">      <span class="attr">&quot;miDebuggerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;[debugger_path]/gdb.exe&quot;</span><span class="punctuation">,</span> <span class="comment">//调试器路径,在Linux环境下需要注释掉这一行</span></span><br><span class="line">      <span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gcc&quot;</span><span class="punctuation">,</span> <span class="comment">//调试会话开始前执行的任务，一般为编译程序。与tasks.json的label相对应</span></span><br><span class="line">      <span class="attr">&quot;setupCommands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="comment">//不知道干嘛的</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Enable pretty-printing for gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;-enable-pretty-printing&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;ignoreFailures&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<p><strong><code>tasks.json</code></strong></p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gcc&quot;</span><span class="punctuation">,</span> <span class="comment">// 任务名称，与launch.json的preLaunchTask相对应</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gcc&quot;</span><span class="punctuation">,</span> <span class="comment">// 要使用的编译器</span></span><br><span class="line">      <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;$&#123;file&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span> <span class="comment">// 指定输出文件名，不加该参数则默认输出a.exe，Linux下默认a.out</span></span><br><span class="line">        <span class="string">&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span> <span class="comment">// 生成和调试有关的信息</span></span><br><span class="line">        <span class="string">&quot;-Wall&quot;</span><span class="punctuation">,</span> <span class="comment">// 开启额外警告</span></span><br><span class="line">        <span class="string">&quot;-fexec-charset=GBK&quot;</span> <span class="comment">// 防止中文乱码，按需取用</span></span><br><span class="line">      <span class="punctuation">]</span><span class="punctuation">,</span> <span class="comment">// 编译命令参数</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppbuild&quot;</span><span class="punctuation">,</span> <span class="comment">// 可以为shell或process，前者相当于先打开shell再输入命令，后者是直接运行命令</span></span><br><span class="line">      <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;[debugger_path]/bin&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;$gcc&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;detail&quot;</span><span class="punctuation">:</span> <span class="string">&quot;compiler: gcc&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Win10-任务栏菜单小图标变黑了">Win10 任务栏菜单小图标变黑了</h2>
-<blockquote>
-<p>2020-9-10 16:55 GMT+8<br>
-建议创建开机任务执行</p>
-</blockquote>
-<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">ie4uinit <span class="literal">-show</span></span><br></pre></td></tr></table></figure>
-<h2 id="通过-JDK-生成-JRE">通过 JDK 生成 JRE</h2>
-<blockquote>
-<p>2020-9-22 9:36 GMT+8</p>
-</blockquote>
-<div class="note warning flat"><p>需要管理员权限的 CMD 运行</p>
-</div>
-<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> %JAVA_HOME%</span><br><span class="line">bin\jlink.exe <span class="literal">--module-path</span> jmods <span class="literal">--add-modules</span> java.desktop <span class="literal">--output</span> jre</span><br></pre></td></tr></table></figure>
-<h2 id="使用-hexo-reference-插件生成脚注编号重复">使用 hexo-reference 插件生成脚注编号重复</h2>
-<ol>
-<li>
-<p>找到 <code>\&lt;blog_root_folder&gt;\node_modules\hexo-reference\src\footnotes.js</code></p>
-</li>
-<li>
-<p>删除或者注释这几行代码</p>
-</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// render footnotes (HTML)</span></span><br><span class="line">footnotes.<span class="title function_">forEach</span>(<span class="keyword">function</span> (<span class="params">footNote</span>) &#123;</span><br><span class="line">    html += <span class="string">&#x27;&lt;li id=&quot;fn:&#x27;</span> + footNote.<span class="property">index</span> + <span class="string">&#x27;&quot;&gt;&#x27;</span>;</span><br><span class="line">  -&gt;<span class="comment">// html += &#x27;&lt;span style=&quot;display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px&quot;&gt;&#x27;;</span></span><br><span class="line">  -&gt;<span class="comment">// html += footNote.index;</span></span><br><span class="line">  -&gt;<span class="comment">// html += &#x27;.&lt;/span&gt;&#x27;;</span></span><br><span class="line">    html += <span class="string">&#x27;&lt;span style=&quot;display: inline-block; vertical-align: top; margin-left: 10px;&quot;&gt;&#x27;</span>;</span><br><span class="line">    html += md.<span class="title function_">renderInline</span>(footNote.<span class="property">content</span>.<span class="title function_">trim</span>());</span><br><span class="line">    html += <span class="string">&#x27;&lt;a href=&quot;#fnref:&#x27;</span> + footNote.<span class="property">index</span> + <span class="string">&#x27;&quot; rev=&quot;footnote&quot;&gt; ↩&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&#x27;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="Grub-找不到-Windows-引导了">Grub 找不到 Windows 引导了</h2>
-<blockquote>
-<p>2021-3-19 11:12 GMT+8<br>
-我是用的是 Manjaro</p>
-</blockquote>
-<p>首先需要安装 <code>os-prober</code>，然后打开 <code>/etc/default/grub</code>，编辑或者添加以下几项</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">GRUB_TIMEOUT_STYLE=menu  #显示菜单</span><br><span class="line">GRUB_TIMEOUT=10   #超时时间10秒</span><br><span class="line">GRUB_DISABLE_OS_PROBER=false   #允许os探测</span><br></pre></td></tr></table></figure>
-<p>修改完成后运行 <code>sudo update-grub</code> 就可以找到 Windows 引导了。</p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">引用自 <a href="https://blog.butanediol.me/2020/10/13/Buta-Sticky-Notes/">Buta Sticky Notes - 丁丁の店</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
-      <categories>
-        <category>技术记录</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>解决 VS Code 编译 C/C++ 是输出中文乱码的问题</title>
-    <url>/posts/ea8a69ac/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>在 Windows 下使用 VSCode 编译运行 C/C++，都出现中文乱码的问题，这是由于 Windows 控制台使用的还是 GBK 编码。我在网上搜了一下发现需要更换编译器解决，这里贴一下 <a href="http://blog.00oo00.xyz/">梧矜</a> 的 <a href="https://blog.00oo00.xyz/2020/03/12/ru-he-jie-jue-vscode-bian-yi-yun-xing-c-cheng-xu-shi-shu-chu-zhong-wen-luan-ma/">解决 vscode 编译运行 C 程序时乱码</a>。</p>
-<p>不是这种方式不好，这种确实从根本解决了问题，但是我是实在懒，所以想了一些外门邪道。然后百度到了可以使用 <code>chcp 65001</code> 命令把控制台的编码切换到 UTF-8，当然你可以参考这篇 <a href="https://jingyan.baidu.com/article/f7ff0bfcee2dc22e26bb13d5.html">百度知道</a> 或者这篇 <a href="https://www.cnblogs.com/jpfss/p/11016870.html">博文</a> 把编码永久更改，但是我怕会出奇怪的问题，所以在 VS Code 的配置文件找了找，没想到还真有这种骚操作。</p>
-<div class="note info flat"><p>2020-12-14 更新新方法</p>
-</div>
-<p>其实只要给 code runner 插件、手动编译时、VS Code 调试时上 <code>-fexec-charset=GBK</code> 就好了，之前那种方法简直是绕弯路，交作业的时候只需要把编码改成 GBK 就好了。唯一的缺点就是不能编译 GBK 文件，不过这不是问题。</p>
-<h2 id="偷懒的方式">偷懒的方式</h2>
-<p>在 VS Code 中通过打开 <code>文件</code>-&gt; <code>首选项</code>-&gt; <code>设置</code>，然后编辑 VS Code 的 <code>setting.json</code> ，然后添加如下代码</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;terminal.integrated.shellArgs.windows&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;-NoExit&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;/c&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;chcp 65001&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>然后保存即可，现在编译就不会出现中文乱码的问题了，这里贴一下图</p>
-<p><img src="../../media/article_img/vscode_cpp_chinese_garbled_code/%E4%BF%AE%E6%94%B9%E5%89%8D.png" alt="修改前"></p>
-<p><img src="../../media/article_img/vscode_cpp_chinese_garbled_code/%E4%BF%AE%E6%94%B9%E5%90%8E.png" alt="修改后"></p>
-<h3 id="缺点">缺点</h3>
-<p>当然缺点也是有的，就是每次编译的时候会在顶部显示一个 <code>Active code page: 65001</code>，不过我觉得无伤大雅，毕竟没换编译器就可以实现差不多的效果还想怎么样。<s>主要还是懒</s></p>
-<h2 id="简便的方式">简便的方式</h2>
-<p><s>其实也可以通过这个按钮解决，不过这个是改变文件的编码，如果把这个文件放到其他设备上可能会有问题</s></p>
-<p><img src="../../media/article_img/vscode_cpp_chinese_garbled_code/%E6%8C%89%E9%92%AE.png" alt="按钮"></p>
-<h2 id="工作区">工作区</h2>
-<p>如果你只需要在这个工作区生效的话只需要这个目录下的 <code>.vscode</code> 文件夹里的 <code>setting.json</code> 添加这个配置就好了，这样只会对这个工作区生效。</p>
-<h2 id="更多">更多</h2>
-<p>有关 <code>chcp</code> 的更多描述</p>
-<blockquote>
-<p>65001 UTF-8 代码页
-950 繁体中文
-936 简体中文默认的 GBK
-437 MS-DOS 美国英语</p>
-</blockquote>
+    <title>在 Linux 服务器上使用 酷Q</title>
+    <url>/posts/2bdd4eaf/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>众所周知 酷Q 是 Windows 平台下的， Linux 下要使用还是有难度的，好在官方做出了了 docker 镜像，这样就可以在 docker 直接运行了</p>
+<h2 id="准备">准备</h2>
+<ul>
+<li>一台 Linux 服务器 (这里用来演示的系统是 CentOS 7.6 当然其他系统也ok)</li>
+<li>docker</li>
+<li>酷Q 容器</li>
+</ul>
+<h2 id="安装及运行-docker">安装及运行 docker</h2>
+<p>在 CentOS 下直接使用 yum 安装即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install docker</span><br></pre></td></tr></table></figure>
+<p>安装之后如果提示</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cannot connect to the Docker daemon. Is the docker daemon running on this host?</span><br></pre></td></tr></table></figure>
+<p>这是因为 docker 还没有在运行</p>
+<p>sudo 运行一下 docker 就正常了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
+<h3 id="3-下载-酷Q-镜像，后台运行容器">3. 下载 酷Q 镜像，后台运行容器</h3>
+<p>使用下面的命令获取镜像</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker pull coolq/wine-coolq</span><br></pre></td></tr></table></figure>
+<p>这个速度取决于你的服务器带宽</p>
+<p>创建一个用于存放（映射）coolq 数据的目录（可以理解为数据卷？），用于持久化存放 coolq（酷Q应用）的数据</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mkdir</span> /coolq-data</span><br></pre></td></tr></table></figure>
+<p>这一步很重要，因为数据是最重要的，而且后面你的酷Q应用都要上传到此目录才能应用上的</p>
+<p>后台运行 coolq 容器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker run --name=coolq -d -p 8080:9000 -v /coolq-data:/home/user/coolq -e VNC_PASSWD=12345678 -e COOLQ_ACCOUNT=1000000000 coolq/wine-coolq</span><br></pre></td></tr></table></figure>
+<p>其中部分参数根据自己的需求替换：</p>
+<p>远程监听端口
+<code>8080(9000映射成8080)</code>
+数据存放位置
+<code>/coolq-data（/home/user/coolq 映射到/coolq-data）</code>
+远程访问密码
+<code>12345678（只能设8位）</code>
+机器人 QQ 帐号
+<code>1000000000</code></p>
+<p>实际上我当然运行的参数不是上面那些示例参数，根据自己的服务器实际来</p>
+<p>这里要注意的是，首先你远程监听的端口，也就是自定义的web端口需要在服务器防火墙和云安全组都放行</p>
+<p>其次，-d 指的是后台运行容器，-v后面接的就是将服务器的自己定义的酷Q数据目录映射到容器内的/home/user/coolq目录，-e是设置容器的系统环境</p>
+<p>因为我们后面要通过vnc连接，所以要指定VNC_PASSWD</p>
+<p>而酷Q要登录的qq小号（充当机器人）也可以通过-e COOLQ_ACCOUNT 去指定</p>
+<h3 id="4-通过浏览器登录-vnc-进行使用">4. 通过浏览器登录 vnc 进行使用</h3>
+<p>现在用浏览器打开 <a href="http://xn--ip-0p3cm89l:8080">http://你的ip:8080</a> 就可以看到 vnc 界面了，点击<code>链接</code>然后输入密码就可以看到桌面了，里面已经运行了 coolq air</p>
+<p>可以看到使用 docker 还是很方便的，之前只用 wine 总是出现字体丢失的问题</p>
 ]]></content>
       <categories>
         <category>技术记录</category>
       </categories>
       <tags>
-        <tag>VS Code</tag>
+        <tag>酷Q</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -651,6 +610,100 @@ duang~
       <tags>
         <tag>Python</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>解决 VS Code 编译 C/C++ 是输出中文乱码的问题</title>
+    <url>/posts/ea8a69ac/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>在 Windows 下使用 VSCode 编译运行 C/C++，都出现中文乱码的问题，这是由于 Windows 控制台使用的还是 GBK 编码。我在网上搜了一下发现需要更换编译器解决，这里贴一下 <a href="http://blog.00oo00.xyz/">梧矜</a> 的 <a href="https://blog.00oo00.xyz/2020/03/12/ru-he-jie-jue-vscode-bian-yi-yun-xing-c-cheng-xu-shi-shu-chu-zhong-wen-luan-ma/">解决 vscode 编译运行 C 程序时乱码</a>。</p>
+<p>不是这种方式不好，这种确实从根本解决了问题，但是我是实在懒，所以想了一些外门邪道。然后百度到了可以使用 <code>chcp 65001</code> 命令把控制台的编码切换到 UTF-8，当然你可以参考这篇 <a href="https://jingyan.baidu.com/article/f7ff0bfcee2dc22e26bb13d5.html">百度知道</a> 或者这篇 <a href="https://www.cnblogs.com/jpfss/p/11016870.html">博文</a> 把编码永久更改，但是我怕会出奇怪的问题，所以在 VS Code 的配置文件找了找，没想到还真有这种骚操作。</p>
+<div class="note info flat"><p>2020-12-14 更新新方法</p>
+</div>
+<p>其实只要给 code runner 插件、手动编译时、VS Code 调试时上 <code>-fexec-charset=GBK</code> 就好了，之前那种方法简直是绕弯路，交作业的时候只需要把编码改成 GBK 就好了。唯一的缺点就是不能编译 GBK 文件，不过这不是问题。</p>
+<h2 id="偷懒的方式">偷懒的方式</h2>
+<p>在 VS Code 中通过打开 <code>文件</code>-&gt; <code>首选项</code>-&gt; <code>设置</code>，然后编辑 VS Code 的 <code>setting.json</code> ，然后添加如下代码</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;terminal.integrated.shellArgs.windows&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;-NoExit&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;/c&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;chcp 65001&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>然后保存即可，现在编译就不会出现中文乱码的问题了，这里贴一下图</p>
+<p><img src="../../media/article_img/vscode_cpp_chinese_garbled_code/%E4%BF%AE%E6%94%B9%E5%89%8D.png" alt="修改前"></p>
+<p><img src="../../media/article_img/vscode_cpp_chinese_garbled_code/%E4%BF%AE%E6%94%B9%E5%90%8E.png" alt="修改后"></p>
+<h3 id="缺点">缺点</h3>
+<p>当然缺点也是有的，就是每次编译的时候会在顶部显示一个 <code>Active code page: 65001</code>，不过我觉得无伤大雅，毕竟没换编译器就可以实现差不多的效果还想怎么样。<s>主要还是懒</s></p>
+<h2 id="简便的方式">简便的方式</h2>
+<p><s>其实也可以通过这个按钮解决，不过这个是改变文件的编码，如果把这个文件放到其他设备上可能会有问题</s></p>
+<p><img src="../../media/article_img/vscode_cpp_chinese_garbled_code/%E6%8C%89%E9%92%AE.png" alt="按钮"></p>
+<h2 id="工作区">工作区</h2>
+<p>如果你只需要在这个工作区生效的话只需要这个目录下的 <code>.vscode</code> 文件夹里的 <code>setting.json</code> 添加这个配置就好了，这样只会对这个工作区生效。</p>
+<h2 id="更多">更多</h2>
+<p>有关 <code>chcp</code> 的更多描述</p>
+<blockquote>
+<p>65001 UTF-8 代码页
+950 繁体中文
+936 简体中文默认的 GBK
+437 MS-DOS 美国英语</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术记录</category>
+      </categories>
+      <tags>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决方案.方案</title>
+    <url>/posts/notes/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote>
+<p>日常解决问题基本靠 Google，拿来水博客跟 <em>Copy&amp;Paste</em> 也没啥区别，但是又想把这些方法记录下来，万一以后需要用还方便查看，于是打算全部写在这一篇文章里了。</p>
+<p>当然，为了防止未来的我忘记当时写的是什么东西，咱尽量将一些因人而异、因机而异的东西标注出来（比如每段的 Replacement），但难免有疏漏，如果有读者能够看到，并感到疑惑，请不要吝啬你的留言。<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="引用自 [Buta Sticky Notes - 丁丁の店](https://blog.butanediol.me/2020/10/13/Buta-Sticky-Notes/)
+">[1]</span></a></sup></p>
+</blockquote>
+<div class="note info flat"><p>因为我是用的是 Windows 10 系统所以一下的东西只保证在 Windows 10 有用其他系统，诸如 Windows 7/Linux/macOS 请自行查找方案</p>
+</div>
+<h2 id="目前可用的-VS-Code-调试-C-C-配置">目前可用的 VS Code 调试 C/C++ 配置</h2>
+<blockquote>
+<p>2020-11-12 19:53 GMT +8<br>
+基于网上现有的稍加修改</p>
+</blockquote>
+<div class="note info flat"><p>请替换 [debugger_path] 并且保证你的 gcc 是可用状态，或者使用其他的编译器/调试器</p>
+</div>
+<p><strong><code>launch.json</code></strong></p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="comment">// 使用 IntelliSense 了解相关属性。</span></span><br><span class="line">  <span class="comment">// 悬停以查看现有属性的描述。</span></span><br><span class="line">  <span class="comment">// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2,0.0&quot;</span><span class="punctuation">,</span> <span class="comment">//配置文件的版本，以前使用是0.2.0，新版本已经弃用，改用为2.0.0</span></span><br><span class="line">  <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="comment">//配置域</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(gdb) Launch&quot;</span><span class="punctuation">,</span> <span class="comment">//配置文件的名字，可以随便起</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span> <span class="comment">//调试的类型，Vscode现在支持很多，我这里主要是C，所以只能是cppdbg</span></span><br><span class="line">      <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span> <span class="comment">//配置文件的请求类型，有launch和attach两种，具体看官方文档</span></span><br><span class="line">      <span class="attr">&quot;targetArchitecture&quot;</span><span class="punctuation">:</span> <span class="string">&quot;x64&quot;</span><span class="punctuation">,</span> <span class="comment">//硬件内核架构，为64bit，如图设置</span></span><br><span class="line">      <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceRoot&#125;/$&#123;fileBasenameNoExtension&#125;.exe&quot;</span><span class="punctuation">,</span> <span class="comment">//可执行文件的路径和文件名称</span></span><br><span class="line">      <span class="comment">//&quot;args&quot;: [&quot;file1&quot;, &quot;file2&quot;], //主函数调用时传入的参数</span></span><br><span class="line">      <span class="attr">&quot;stopAtEntry&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span> <span class="comment">//设为true时程序将暂停在程序入口处</span></span><br><span class="line">      <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span><span class="punctuation">,</span> <span class="comment">//调试时的工作目录</span></span><br><span class="line">      <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="comment">//不知道干嘛的</span></span><br><span class="line">      <span class="attr">&quot;internalConsoleOptions&quot;</span><span class="punctuation">:</span> <span class="string">&quot;openOnSessionStart&quot;</span><span class="punctuation">,</span> <span class="comment">//</span></span><br><span class="line">      <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span> <span class="comment">//调试时是否显示控制台窗口</span></span><br><span class="line">      <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gdb&quot;</span><span class="punctuation">,</span> <span class="comment">//指定连接的调试器，可以省略不写</span></span><br><span class="line">      <span class="attr">&quot;miDebuggerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;[debugger_path]/gdb.exe&quot;</span><span class="punctuation">,</span> <span class="comment">//调试器路径,在Linux环境下需要注释掉这一行</span></span><br><span class="line">      <span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gcc&quot;</span><span class="punctuation">,</span> <span class="comment">//调试会话开始前执行的任务，一般为编译程序。与tasks.json的label相对应</span></span><br><span class="line">      <span class="attr">&quot;setupCommands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="comment">//不知道干嘛的</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Enable pretty-printing for gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;-enable-pretty-printing&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;ignoreFailures&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><strong><code>tasks.json</code></strong></p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gcc&quot;</span><span class="punctuation">,</span> <span class="comment">// 任务名称，与launch.json的preLaunchTask相对应</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gcc&quot;</span><span class="punctuation">,</span> <span class="comment">// 要使用的编译器</span></span><br><span class="line">      <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;$&#123;file&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span> <span class="comment">// 指定输出文件名，不加该参数则默认输出a.exe，Linux下默认a.out</span></span><br><span class="line">        <span class="string">&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span> <span class="comment">// 生成和调试有关的信息</span></span><br><span class="line">        <span class="string">&quot;-Wall&quot;</span><span class="punctuation">,</span> <span class="comment">// 开启额外警告</span></span><br><span class="line">        <span class="string">&quot;-fexec-charset=GBK&quot;</span> <span class="comment">// 防止中文乱码，按需取用</span></span><br><span class="line">      <span class="punctuation">]</span><span class="punctuation">,</span> <span class="comment">// 编译命令参数</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppbuild&quot;</span><span class="punctuation">,</span> <span class="comment">// 可以为shell或process，前者相当于先打开shell再输入命令，后者是直接运行命令</span></span><br><span class="line">      <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;[debugger_path]/bin&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;$gcc&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;detail&quot;</span><span class="punctuation">:</span> <span class="string">&quot;compiler: gcc&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Win10-任务栏菜单小图标变黑了">Win10 任务栏菜单小图标变黑了</h2>
+<blockquote>
+<p>2020-9-10 16:55 GMT+8<br>
+建议创建开机任务执行</p>
+</blockquote>
+<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">ie4uinit <span class="literal">-show</span></span><br></pre></td></tr></table></figure>
+<h2 id="通过-JDK-生成-JRE">通过 JDK 生成 JRE</h2>
+<blockquote>
+<p>2020-9-22 9:36 GMT+8</p>
+</blockquote>
+<div class="note warning flat"><p>需要管理员权限的 CMD 运行</p>
+</div>
+<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> %JAVA_HOME%</span><br><span class="line">bin\jlink.exe <span class="literal">--module-path</span> jmods <span class="literal">--add-modules</span> java.desktop <span class="literal">--output</span> jre</span><br></pre></td></tr></table></figure>
+<h2 id="使用-hexo-reference-插件生成脚注编号重复">使用 hexo-reference 插件生成脚注编号重复</h2>
+<ol>
+<li>
+<p>找到 <code>\&lt;blog_root_folder&gt;\node_modules\hexo-reference\src\footnotes.js</code></p>
+</li>
+<li>
+<p>删除或者注释这几行代码</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// render footnotes (HTML)</span></span><br><span class="line">footnotes.<span class="title function_">forEach</span>(<span class="keyword">function</span> (<span class="params">footNote</span>) &#123;</span><br><span class="line">    html += <span class="string">&#x27;&lt;li id=&quot;fn:&#x27;</span> + footNote.<span class="property">index</span> + <span class="string">&#x27;&quot;&gt;&#x27;</span>;</span><br><span class="line">  -&gt;<span class="comment">// html += &#x27;&lt;span style=&quot;display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px&quot;&gt;&#x27;;</span></span><br><span class="line">  -&gt;<span class="comment">// html += footNote.index;</span></span><br><span class="line">  -&gt;<span class="comment">// html += &#x27;.&lt;/span&gt;&#x27;;</span></span><br><span class="line">    html += <span class="string">&#x27;&lt;span style=&quot;display: inline-block; vertical-align: top; margin-left: 10px;&quot;&gt;&#x27;</span>;</span><br><span class="line">    html += md.<span class="title function_">renderInline</span>(footNote.<span class="property">content</span>.<span class="title function_">trim</span>());</span><br><span class="line">    html += <span class="string">&#x27;&lt;a href=&quot;#fnref:&#x27;</span> + footNote.<span class="property">index</span> + <span class="string">&#x27;&quot; rev=&quot;footnote&quot;&gt; ↩&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;&#x27;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Grub-找不到-Windows-引导了">Grub 找不到 Windows 引导了</h2>
+<blockquote>
+<p>2021-3-19 11:12 GMT+8<br>
+我是用的是 Manjaro</p>
+</blockquote>
+<p>首先需要安装 <code>os-prober</code>，然后打开 <code>/etc/default/grub</code>，编辑或者添加以下几项</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">GRUB_TIMEOUT_STYLE=menu  #显示菜单</span><br><span class="line">GRUB_TIMEOUT=10   #超时时间10秒</span><br><span class="line">GRUB_DISABLE_OS_PROBER=false   #允许os探测</span><br></pre></td></tr></table></figure>
+<p>修改完成后运行 <code>sudo update-grub</code> 就可以找到 Windows 引导了。</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">引用自 <a href="https://blog.butanediol.me/2020/10/13/Buta-Sticky-Notes/">Buta Sticky Notes - 丁丁の店</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
+      <categories>
+        <category>技术记录</category>
+      </categories>
   </entry>
   <entry>
     <title>在 Coding 上部署完美校园打卡</title>
@@ -739,59 +792,6 @@ duang~
         <tag>Windows</tag>
         <tag>ssh</tag>
         <tag>代理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在 Linux 服务器上使用 酷Q</title>
-    <url>/posts/2bdd4eaf/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>众所周知 酷Q 是 Windows 平台下的， Linux 下要使用还是有难度的，好在官方做出了了 docker 镜像，这样就可以在 docker 直接运行了</p>
-<h2 id="准备">准备</h2>
-<ul>
-<li>一台 Linux 服务器 (这里用来演示的系统是 CentOS 7.6 当然其他系统也ok)</li>
-<li>docker</li>
-<li>酷Q 容器</li>
-</ul>
-<h2 id="安装及运行-docker">安装及运行 docker</h2>
-<p>在 CentOS 下直接使用 yum 安装即可</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install docker</span><br></pre></td></tr></table></figure>
-<p>安装之后如果提示</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Cannot connect to the Docker daemon. Is the docker daemon running on this host?</span><br></pre></td></tr></table></figure>
-<p>这是因为 docker 还没有在运行</p>
-<p>sudo 运行一下 docker 就正常了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
-<h3 id="3-下载-酷Q-镜像，后台运行容器">3. 下载 酷Q 镜像，后台运行容器</h3>
-<p>使用下面的命令获取镜像</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker pull coolq/wine-coolq</span><br></pre></td></tr></table></figure>
-<p>这个速度取决于你的服务器带宽</p>
-<p>创建一个用于存放（映射）coolq 数据的目录（可以理解为数据卷？），用于持久化存放 coolq（酷Q应用）的数据</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mkdir</span> /coolq-data</span><br></pre></td></tr></table></figure>
-<p>这一步很重要，因为数据是最重要的，而且后面你的酷Q应用都要上传到此目录才能应用上的</p>
-<p>后台运行 coolq 容器</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker run --name=coolq -d -p 8080:9000 -v /coolq-data:/home/user/coolq -e VNC_PASSWD=12345678 -e COOLQ_ACCOUNT=1000000000 coolq/wine-coolq</span><br></pre></td></tr></table></figure>
-<p>其中部分参数根据自己的需求替换：</p>
-<p>远程监听端口
-<code>8080(9000映射成8080)</code>
-数据存放位置
-<code>/coolq-data（/home/user/coolq 映射到/coolq-data）</code>
-远程访问密码
-<code>12345678（只能设8位）</code>
-机器人 QQ 帐号
-<code>1000000000</code></p>
-<p>实际上我当然运行的参数不是上面那些示例参数，根据自己的服务器实际来</p>
-<p>这里要注意的是，首先你远程监听的端口，也就是自定义的web端口需要在服务器防火墙和云安全组都放行</p>
-<p>其次，-d 指的是后台运行容器，-v后面接的就是将服务器的自己定义的酷Q数据目录映射到容器内的/home/user/coolq目录，-e是设置容器的系统环境</p>
-<p>因为我们后面要通过vnc连接，所以要指定VNC_PASSWD</p>
-<p>而酷Q要登录的qq小号（充当机器人）也可以通过-e COOLQ_ACCOUNT 去指定</p>
-<h3 id="4-通过浏览器登录-vnc-进行使用">4. 通过浏览器登录 vnc 进行使用</h3>
-<p>现在用浏览器打开 <a href="http://xn--ip-0p3cm89l:8080">http://你的ip:8080</a> 就可以看到 vnc 界面了，点击<code>链接</code>然后输入密码就可以看到桌面了，里面已经运行了 coolq air</p>
-<p>可以看到使用 docker 还是很方便的，之前只用 wine 总是出现字体丢失的问题</p>
-]]></content>
-      <categories>
-        <category>技术记录</category>
-      </categories>
-      <tags>
-        <tag>酷Q</tag>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -910,37 +910,56 @@ duang~
       </tags>
   </entry>
   <entry>
-    <title>如何使用 Dolphin Emulator 玩《星之卡比：Wii》</title>
-    <url>/posts/2fbba4ed/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote>
-<p>开头附上星之卡比系列的 <a href="https://eyun.baidu.com/s/3i51Jf17">下载地址</a> 还有 Wii 模拟器的 <a href="https://cn.dolphin-emu.org/">下载地址</a></p>
+    <title>偶然间在B站看到的鬼畜</title>
+    <url>/posts/d46d4e39/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>刚才逛 B 站的时候在首页偶然看到这个，播放量还挺高的，就点进去看看了。神级填词，现在的老哥们简直神了，真的容易引起共鸣，然后又想起了以前的一些事，诶。</p>
+<span id="more"></span>
+<p>不多说啥了，做好现在的自己，不偏离本心！</p>
+<p>视频地址：<a href="https://www.bilibili.com/video/av60731116/">https://www.bilibili.com/video/av60731116/</a></p>
+<iframe src="//player.bilibili.com/player.html?aid=60731116&cid=106015992&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 640px; height: 430px; max-width: 100%"> </iframe>
+<blockquote>
+<p><strong>贴一个里面的评论</strong>
+曾经看到大学宿舍里的沙雕图片，一个光膀大汉法相庄严，后面的人伸出手摆成千手佛陀，下面有句热评：</p>
+<p>“珍惜现在的时光吧，能陪你一起沙雕的朋友已经越来越少了。”</p>
+<p>欢乐是如何消失的呢，海绵宝宝？</p>
+<p>当你变成正常人、长大的时候，它就和你告了别。</p>
+<p>我喜欢什么都不做，喜欢追求最天真的快乐。
+闭眼数数和我一般如星星闪耀的天才，可是只有我一个派大星。
+知道我找到了另一颗星星，你，海绵宝宝。愿意和我一起享受快乐。
+我不知道为什么他们说我是废物。
+我不知道为什么太阳西边是落处。
+我不知道为什么章鱼哥追求艺术。
+我不知道为什么蟹老板攒钱如土。
+即便抽不中想要的角色，我们却有辆小汽车。
+即便驾照总是触不可及，我们也能玩摇摇乐。
+即便去抓水母邻居遭殃，我们还在享受快乐。
+当人们追求自己喜欢的东西的时候，为什么你渐行渐远了呢。
+即便你有喜爱的工作、支持你的朋友、爱你的家人、听话的小窝和大把的青春值得去奋斗，我却发现你不再快乐，生病了。
+你说想要变回常人。
+你说羡慕章鱼哥受人景仰。
+你说羡慕蟹老板家财万贯。
+你说抓水母让章鱼哥愤怒。
+你说想要的角色难以抽到。
+你说不考驾照快乐受了限。
+我最好的朋友，你这样我也很难受。
+当我看到那电章鱼哥的水母，我一定要抓到。
+当我再去商场终于抽到角色，你一直想要的。
+当我考来驾照坐上那小汽车，想和你去冒险。
+于是我带着这些再次找到你。
+直到见到你漂亮的房子。
+见到你成团的宾客。
+见到你光鲜的衣服。
+见到你贵气的打扮。
+听到你说我嫉妒新生活的话语。
+感受到被丢出去的失落。</p>
+<p>欢乐是如何消失的呢，海绵宝宝？</p>
 </blockquote>
-<h2 id="白屏">白屏</h2>
-<p>有些小伙伴在下好游戏并且在模拟器打开之后会遇到一直卡在白屏的情况，如图</p>
-<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E5%8D%A1%E5%9C%A8%E7%99%BD%E5%B1%8F.png" alt="卡在白屏"></p>
-<p>那么这个时候就要注意是不是模拟器语言设置的问题，我们可以在这里看到游戏的语言</p>
-<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E6%9F%A5%E7%9C%8B%E8%AF%AD%E8%A8%80.png" alt="查看语言"></p>
-<p>那么可以看到这个语言是 <code>日语</code>，那我们就要把模拟器改成对应的，看图操作，找到 <code>设置 -&gt; Wii -&gt; 系统语言</code>，然后在下拉菜单里找到 <code>对应语言</code>，然后点击关闭即可</p>
-<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E4%BF%AE%E6%94%B9%E8%AF%AD%E8%A8%80.png" alt="修改语言"></p>
-<p>现在开始游戏就可以正常运行了</p>
-<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C.png" alt="正常运行"></p>
-<h2 id="无法进入">无法进入</h2>
-<p>那有时候还会出现无法进入游戏界面的情况，会有类似下面这样的提示</p>
-<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5.png" alt="无法进入"></p>
-<p>那这个情况只需要去 <code>控制器 -&gt; Wii 遥控器</code> 然后点击你要是用的模拟手柄的设置，将 <code>扩展</code> 这一项改成无就可以，看图操作</p>
-<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E4%BF%AE%E6%94%B9%E6%89%A9%E5%B1%951.png" alt="修改扩展1"></p>
-<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E4%BF%AE%E6%94%B9%E6%89%A9%E5%B1%952.png" alt="修改扩展2"></p>
-<p>现在再试试进入游戏就正常了</p>
-<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C.png" alt="正常运行"></p>
 ]]></content>
       <categories>
-        <category>星之卡比系列教程</category>
+        <category>碎碎念</category>
       </categories>
       <tags>
-        <tag>星之卡比</tag>
-        <tag>星之卡比 Wii</tag>
-        <tag>Wii 模拟器</tag>
-        <tag>Dolphin Emulator</tag>
+        <tag>视频</tag>
       </tags>
   </entry>
   <entry>
@@ -973,34 +992,6 @@ duang~
       </categories>
       <tags>
         <tag>开往</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>怎么呼吸</title>
-    <url>/posts/b0821049/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>不能呼吸的时候
-是不是很难受？
-这只海龟也是这么觉得的
-<img src="../../media/article_img/how2_breathe/%E6%B5%B7%E9%BE%9F.jpg" alt="image">
-<strong>怎么救它？</strong>
-尽量不去用一次性的塑料产品
-比如 不买一次性塑料袋
-喝饮料的时候不要用吸管
-放一双公筷
-点外卖的时候选择「不要餐具」
-随身带一个保温杯
-不强求一步到位
-也不去强迫别人
-改变
-从自身的一点点
-到地球的「亿」点点</p>
-]]></content>
-      <categories>
-        <category>正经文字</category>
-      </categories>
-      <tags>
-        <tag>环保</tag>
-        <tag>塑料产品</tag>
       </tags>
   </entry>
   <entry>
@@ -1422,56 +1413,206 @@ duang~
       </tags>
   </entry>
   <entry>
-    <title>偶然间在B站看到的鬼畜</title>
-    <url>/posts/d46d4e39/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>刚才逛 B 站的时候在首页偶然看到这个，播放量还挺高的，就点进去看看了。神级填词，现在的老哥们简直神了，真的容易引起共鸣，然后又想起了以前的一些事，诶。</p>
-<span id="more"></span>
-<p>不多说啥了，做好现在的自己，不偏离本心！</p>
-<p>视频地址：<a href="https://www.bilibili.com/video/av60731116/">https://www.bilibili.com/video/av60731116/</a></p>
-<iframe src="//player.bilibili.com/player.html?aid=60731116&cid=106015992&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 640px; height: 430px; max-width: 100%"> </iframe>
-<blockquote>
-<p><strong>贴一个里面的评论</strong>
-曾经看到大学宿舍里的沙雕图片，一个光膀大汉法相庄严，后面的人伸出手摆成千手佛陀，下面有句热评：</p>
-<p>“珍惜现在的时光吧，能陪你一起沙雕的朋友已经越来越少了。”</p>
-<p>欢乐是如何消失的呢，海绵宝宝？</p>
-<p>当你变成正常人、长大的时候，它就和你告了别。</p>
-<p>我喜欢什么都不做，喜欢追求最天真的快乐。
-闭眼数数和我一般如星星闪耀的天才，可是只有我一个派大星。
-知道我找到了另一颗星星，你，海绵宝宝。愿意和我一起享受快乐。
-我不知道为什么他们说我是废物。
-我不知道为什么太阳西边是落处。
-我不知道为什么章鱼哥追求艺术。
-我不知道为什么蟹老板攒钱如土。
-即便抽不中想要的角色，我们却有辆小汽车。
-即便驾照总是触不可及，我们也能玩摇摇乐。
-即便去抓水母邻居遭殃，我们还在享受快乐。
-当人们追求自己喜欢的东西的时候，为什么你渐行渐远了呢。
-即便你有喜爱的工作、支持你的朋友、爱你的家人、听话的小窝和大把的青春值得去奋斗，我却发现你不再快乐，生病了。
-你说想要变回常人。
-你说羡慕章鱼哥受人景仰。
-你说羡慕蟹老板家财万贯。
-你说抓水母让章鱼哥愤怒。
-你说想要的角色难以抽到。
-你说不考驾照快乐受了限。
-我最好的朋友，你这样我也很难受。
-当我看到那电章鱼哥的水母，我一定要抓到。
-当我再去商场终于抽到角色，你一直想要的。
-当我考来驾照坐上那小汽车，想和你去冒险。
-于是我带着这些再次找到你。
-直到见到你漂亮的房子。
-见到你成团的宾客。
-见到你光鲜的衣服。
-见到你贵气的打扮。
-听到你说我嫉妒新生活的话语。
-感受到被丢出去的失落。</p>
-<p>欢乐是如何消失的呢，海绵宝宝？</p>
-</blockquote>
+    <title>动态替换 ViewPager 里面的 Fragment</title>
+    <url>/posts/6b0c894/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>最近在重写 Kirby Assistant 过程中又遇到了需要动态替换 ViewPager 的某个 Fragment 的需求，因为之前的是直接在同一个布局里暴力替换的，但是这次因为是用其他方法实现的，当然不能用以前的方法了，摸索了一段时间后终于搞定了，现在把可以用的方法放在下面</p>
+<h3 id="准备过程">准备过程</h3>
+<p>首先需要在布局中添加 ViewPager</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.viewpager.widget.ViewPager</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/main_fragment_viewpager&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后给 ViewPager 写一个 ViewPagerAdapter 并且继承自 FragmentPagerAdapter</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ViewPagerAdapter</span> <span class="keyword">extends</span> <span class="title class_">FragmentPagerAdapter</span> &#123;</span><br><span class="line"><span class="comment">//其他东西</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="重写-ViewPagerAdapter">重写 ViewPagerAdapter</h3>
+<p>具体看代码的注释，有注释的都是需要注意的</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ViewPagerAdapter</span> <span class="keyword">extends</span> <span class="title class_">FragmentPagerAdapter</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> FragmentManager fm;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Fragment&gt; fragments;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; page_title;<span class="comment">//这个是对应碎片的标题，可以不需要</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">ViewPagerAdapter</span><span class="params">(FragmentManager fm, List&lt;Fragment&gt; fragments,List&lt;String&gt; page_title)</span>&#123;</span><br><span class="line">        <span class="built_in">super</span>(fm);</span><br><span class="line">        <span class="built_in">this</span>.fm=fm;</span><br><span class="line">        <span class="built_in">this</span>.fragments=fragments;</span><br><span class="line">        <span class="built_in">this</span>.page_title=page_title;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//注意这个方法，这个是配置你在哪个碎片上进行替换</span></span><br><span class="line">    <span class="meta">@NonNull</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">instantiateItem</span><span class="params">(<span class="meta">@NonNull</span> ViewGroup container, <span class="type">int</span> position)</span> &#123;</span><br><span class="line">        <span class="comment">//这里的判断说明的是在三个和第四个碎片上替换</span></span><br><span class="line">        <span class="keyword">if</span> (position == <span class="number">2</span>||position == <span class="number">3</span>)</span><br><span class="line">            removeFragment(container,position);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">super</span>.instantiateItem(container, position);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//这个方法就是通过 Tag 来判断碎片是不是原来的，如果不是就进行替换</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">removeFragment</span><span class="params">(ViewGroup container,<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">tag</span> <span class="operator">=</span> getFragmentTag(container.getId(), index);</span><br><span class="line">        <span class="type">Fragment</span> <span class="variable">fragment</span> <span class="operator">=</span> fm.findFragmentByTag(tag);</span><br><span class="line">        <span class="keyword">if</span> (fragment == <span class="literal">null</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="type">FragmentTransaction</span> <span class="variable">ft</span> <span class="operator">=</span> fm.beginTransaction();</span><br><span class="line">        ft.remove(fragment);</span><br><span class="line">        ft.commit();</span><br><span class="line">        ft = <span class="literal">null</span>;</span><br><span class="line">        fm.executePendingTransactions();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NonNull</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Fragment <span class="title function_">getItem</span><span class="params">(<span class="type">int</span> position)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> fragments.get(position);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getCount</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> fragments.size();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//注意写成这样才可以进行刷新</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getItemPosition</span><span class="params">(<span class="meta">@NonNull</span> Object object)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> PagerAdapter.POSITION_NONE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> CharSequence <span class="title function_">getPageTitle</span><span class="params">(<span class="type">int</span> position)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> page_title.get(position);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//禁止销毁view达到复用</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroyItem</span><span class="params">(<span class="meta">@NonNull</span> ViewGroup container, <span class="type">int</span> position, <span class="meta">@NonNull</span> Object object)</span> &#123;&#125;</span><br><span class="line">    <span class="comment">//获取碎片的tag</span></span><br><span class="line">    <span class="keyword">private</span> String <span class="title function_">getFragmentTag</span><span class="params">(<span class="type">int</span> viewId, <span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class&lt;FragmentPagerAdapter&gt; cls = FragmentPagerAdapter.class;</span><br><span class="line">            Class&lt;?&gt;[] parameterTypes = &#123; <span class="type">int</span>.class, <span class="type">long</span>.class &#125;;</span><br><span class="line">            <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> cls.getDeclaredMethod(<span class="string">&quot;makeFragmentName&quot;</span>,</span><br><span class="line">                    parameterTypes);</span><br><span class="line">            method.setAccessible(<span class="literal">true</span>);</span><br><span class="line">            <span class="type">String</span> <span class="variable">tag</span> <span class="operator">=</span> (String) method.invoke(<span class="built_in">this</span>, viewId, index);</span><br><span class="line">            <span class="keyword">return</span> tag;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="注意问题">注意问题</h3>
+<p>如果出现替换后出现某个碎片的布局空白了，那就设置一个 ViewPager 的缓存属性</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">main_fragment_viewpager.setOffscreenPageLimit(<span class="number">4</span>);<span class="comment">//4代表缓存4页，根据实际情况调整</span></span><br></pre></td></tr></table></figure>
+<h3 id="结尾">结尾</h3>
+<p>如果有代码什么问题可以向我提出</p>
 ]]></content>
       <categories>
-        <category>碎碎念</category>
+        <category>编程</category>
       </categories>
       <tags>
-        <tag>视频</tag>
+        <tag>踩坑</tag>
+        <tag>Android</tag>
+        <tag>ViewPager</tag>
+        <tag>Fragment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Flutter 实现图片下划线的 TabBar</title>
+    <url>/posts/51bf3ff2/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>最近在公司写项目的时候遇到了要把 TabBar 的下划线改成图片样式的，但是官方组件似乎没有提供，在网上也搜不到相关的内容，很是苦恼。后来找到了 <a href="https://medium.com/swlh/flutter-custom-tab-indicator-for-tabbar-d72bbc6c9d0c">Flutter: Custom tab indicator for TabBar</a> 这篇文章，发现他自定义为圆形的方法很简洁，或许可以来<s>抄袭</s>借鉴一下。</p>
+<h2 id="创建必须组件">创建必须组件</h2>
+<p>首先创建一个 <code>custom_tabbar.dart</code> 来放我们自定义的 TabBar，这样方便复用，里面的代码如下</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomTabBar</span> <span class="keyword">extends</span> <span class="title">StatefulWidget</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> CustomTabBar(&#123;</span><br><span class="line">    Key key,</span><br><span class="line">    <span class="meta">@required</span> <span class="keyword">this</span>.tabs,</span><br><span class="line">    <span class="meta">@required</span> <span class="keyword">this</span>.imagePath,</span><br><span class="line">    <span class="meta">@required</span> <span class="keyword">this</span>.controller,</span><br><span class="line">  &#125;) : <span class="keyword">assert</span>(tabs != <span class="keyword">null</span>),</span><br><span class="line">        <span class="keyword">super</span>(key: key);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">List</span>&lt;Widget&gt; tabs;</span><br><span class="line">  <span class="keyword">final</span> TabController controller;</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">String</span> imagePath;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  _CustomTabBarrState createState() =&gt; _CustomTabBarState();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_CustomTabBarState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">CustomTabBar</span>&gt; </span>&#123;</span><br><span class="line">  ui.Image _image;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    loadImage(widget.imagePath).then(</span><br><span class="line">          (value) =&gt; setState(</span><br><span class="line">            () &#123;</span><br><span class="line">          _image = value;</span><br><span class="line">        &#125;,</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> TabBar(</span><br><span class="line">      tabs: widget.tabs,</span><br><span class="line">      controller: widget.controller,</span><br><span class="line">      indicator: ImageTabIndicator(image: _image),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用 StatefulWidget 是因为获取到图片之后要刷新一下布局，不然里面的下划线都是空的了，<code>loadImage</code> 是一个从 Assets 获取图片转换到 Image 的方法，这是 <code>dart:ui</code> 包下面的，方法代码如下：</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter/services.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;dart:ui&#x27;</span> <span class="keyword">as</span> ui;</span><br><span class="line"></span><br><span class="line">Future&lt;ui.Image&gt; loadImage(<span class="built_in">String</span> path) <span class="keyword">async</span> &#123;</span><br><span class="line">  ByteData data = <span class="keyword">await</span> rootBundle.load(path);</span><br><span class="line">  ui.Codec codec = <span class="keyword">await</span> ui.instantiateImageCodec(data.buffer.asUint8List());</span><br><span class="line">  ui.FrameInfo fi = <span class="keyword">await</span> codec.getNextFrame();</span><br><span class="line">  <span class="keyword">return</span> fi.image;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意这是一个异步方法</p>
+<h2 id="实现图片下划线">实现图片下划线</h2>
+<p>刚才在 <code>custom_tabbar.dart</code> 看到了有一个 <code>ImageTabIndicator</code>，这就是要实现下划线的地方了，里面的代码也比较简单</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImageTabIndicator</span> <span class="keyword">extends</span> <span class="title">Decoration</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> BoxPainter _painter;</span><br><span class="line"></span><br><span class="line">  ImageTabIndicator(&#123;<span class="built_in">double</span> radius = <span class="number">10</span>, <span class="meta">@required</span> ui.Image image&#125;)</span><br><span class="line">      : _painter = _ImagePainter(radius, image);</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  BoxPainter createBoxPainter([onChanged]) =&gt; _painter;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_ImagePainter</span> <span class="keyword">extends</span> <span class="title">BoxPainter</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> Paint _paint;</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">double</span> radius;</span><br><span class="line">  <span class="keyword">final</span> ui.Image image;</span><br><span class="line"></span><br><span class="line">  _ImagePainter(<span class="keyword">this</span>.radius, <span class="keyword">this</span>.image)</span><br><span class="line">      : _paint = Paint()</span><br><span class="line">          ..isAntiAlias = <span class="keyword">true</span></span><br><span class="line">          ..strokeCap = StrokeCap.round;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> paint(Canvas canvas, Offset offset, ImageConfiguration cfg) &#123;</span><br><span class="line">    <span class="keyword">if</span> (image != <span class="keyword">null</span>) &#123;</span><br><span class="line">      <span class="keyword">final</span> Offset imageOffset = offset +</span><br><span class="line">          Offset(cfg.size.width / <span class="number">2</span>, cfg.size.height / <span class="number">2</span> + image.height + <span class="number">2</span>);</span><br><span class="line">      paintImage(</span><br><span class="line">          canvas: canvas,</span><br><span class="line">          rect: Rect.fromCircle(center: imageOffset, radius: radius),</span><br><span class="line">          image: image,</span><br><span class="line">          fit: BoxFit.fitWidth);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里没什么好说的，就是去画传进来的图片，不过这里的位置需要去自己调整。另外不能用 <code>Paint</code> 画，一定要用 <a href="https://api.flutter.dev/flutter/painting/paintImage.html"><code>paintImage</code></a> 来画,他有一个转换方法，使用 <code>Paint</code> 会变成背景。</p>
+<p>17 行这个 <code>Paint</code> 的初始化说实话应该不存在了，但是我试着删除他之后绘制就没了，很奇怪我就留着了。</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>Flutter</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何优雅的使用 Material Design 2</title>
+    <url>/posts/9cb48aa5/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="简介">简介</h3>
+<p>Material Design 2 （下面简称 MD2）已经发布了一段时间了，可是还有一些小伙伴不知道怎么迁移到 MD2 来，我也是查了不少资料才摸索出来的</p>
+<h3 id="AndroidX">AndroidX</h3>
+<p>首先，需要迁移到 AndroidX 来，这个网上有很多教程了，AndroidStudio 和 IDEA 也有相关的功能，这里就不赘述了</p>
+<h3 id="修改主题">修改主题</h3>
+<p>然后，需要修改 <code>styles.xml</code> 中的内容了，修改你之前的主题为</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;style name=<span class="string">&quot;AppTheme&quot;</span> parent=<span class="string">&quot;Theme.MaterialComponents.Light.NoActionBar&quot;</span>&gt;<span class="string">&quot;</span></span><br></pre></td></tr></table></figure>
+<p>当然还有其他可选的</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Theme.MaterialComponents</span><br><span class="line">Theme.MaterialComponents.Light</span><br><span class="line">Theme.MaterialComponents.NoActionBar</span><br><span class="line">Theme.MaterialComponents.Light.NoActionBar</span><br><span class="line">Theme.MaterialComponents.Light.DarkActionBar</span><br></pre></td></tr></table></figure>
+<p>如果只想对 Material 组件生效那就用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Theme.MaterialComponents.Bridge</span><br><span class="line">Theme.MaterialComponents.Light.Bridge</span><br><span class="line">Theme.MaterialComponents.NoActionBar.Bridge</span><br><span class="line">Theme.MaterialComponents.Light.NoActionBar.Bridge</span><br><span class="line">Theme.MaterialComponents.Light.DarkActionBar.Bridge</span><br></pre></td></tr></table></figure>
+<p>仅仅是这一个操作就完成了大部分任务了，现在编译就可以看到一些新特性了
+不过肯定没有这么简单，所以这里来讲解一些坑</p>
+<h3 id="开始踩坑">开始踩坑</h3>
+<h4 id="FloatingActionButton-颜色问题">FloatingActionButton 颜色问题</h4>
+<p>对，你没看错，MD2 默认的 FAB 颜色有一点问题<br>
+默认情况下背景色不是主题的强调色，图标的颜色也是黑的，很丑，那么怎么解决呢？
+很简单，添加</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">app:backgroundTint=<span class="string">&quot;?attr/colorAccent&quot;</span></span><br><span class="line">app:tint=<span class="string">&quot;@android:color/white&quot;</span></span><br></pre></td></tr></table></figure>
+<p>这两行到 FAB 的属性，即</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;com.google.android.material.floatingactionbutton.FloatingActionButton</span><br><span class="line">    android:layout_width=<span class="string">&quot;wrap_content&quot;</span></span><br><span class="line">    android:layout_height=<span class="string">&quot;wrap_content&quot;</span></span><br><span class="line">    android:id=<span class="string">&quot;@+id/fab_chat_edit&quot;</span></span><br><span class="line">        app:backgroundTint=<span class="string">&quot;?attr/colorAccent&quot;</span></span><br><span class="line">        app:tint=<span class="string">&quot;@android:color/white&quot;</span>/&gt;</span><br></pre></td></tr></table></figure>
+<p>这样就完成啦，背景色是主题的强调色，图标是白色，就和以前的一样了，当然也可以修改为其他的颜色</p>
+<h4 id="布局的-Design-界面不能预览">布局的 Design 界面不能预览</h4>
+<p>这个就比较麻烦了，好像只有第一次启动 IDE 的时候能正常看到布局，过一会就无法预览了，提示异常，感觉是个 Bug，临时的解决办法就是修改主题，xml布局界面上边修改主题为旧版本的即可，这样改以后布局可以看，只是 material 的效果都没了，很难受</p>
+<p>还有一种办法，参考 <a href="https://stackoverflow.com/questions/55791884/cannot-render-materialbutton-with-android-material1-1-x">StackOverflow</a> 比较简单的办法,添加一个预览的style</p>
+<p>最后还有一种说是 Android Studio 3.5 修复了，不过我是 IDEA 就不太清楚了</p>
+<h3 id="待续">待续</h3>
+<p>暂时遇到这些，后面还有的话也记录上来</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>踩坑</tag>
+        <tag>Android</tag>
+        <tag>Material Design 2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用 Kotlin 编写一个懒加载与 ViewBinding 的 Fragment</title>
+    <url>/posts/51f7c2cb/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>有关 ViewBinding 的用法看 <a href="https://developer.android.google.cn/topic/libraries/view-binding">这里</a></p>
+<p>最近在学习 Kotlin 的时候有遇到需要封装一个拥有懒加载功能的 Fragment，并且我还想用上新的 ViewBinding 功能。
+那么第一个实现比较简单的，之前在 Java 也封装过，唯一的问题就是之前使用的是重写 <code>setUserVisibleHint</code> 方法来实现的，不过这个方法已经被标记为 <code>deprecated</code>（弃用的）了，指不定那一天就用不了了。
+根据官方的提示：</p>
+<blockquote>
+<p>Deprecated
+Use FragmentTransaction.setMaxLifecycle(Fragment, Lifecycle.State) instead.</p>
+</blockquote>
+<p>我们现在应该去调用 <code>setMaxLifecycle</code> 方法来实现这个功能，使用 <code>setMaxLifecycle</code> 来限制了 Fragment 的生命周期，Fragment 的 <code>onReseume()</code> 只有当 Fragment 显示在屏幕上时才会执行，这样就可以把加载数据的方法放在 <code>onResume()</code> 方法中来实现懒加载了。
+在 <code>FragmentPagerAdapter</code> 适配器构造方法中有一个 <code>behavior</code> 参数，我们只需要传入一个参数就可以限制他的生命周期了。</p>
+<p>那么剩下的就是 <code>ViewBinding</code> 了，这个只需要在继承的时候传入参数就好了，那就开始动手</p>
+<h2 id="BaseFragment-部分">BaseFragment 部分</h2>
+<p>首先贴上代码</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 封装一个有懒加载的 Fragment</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> T 传入泛型的 ViewBinding</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> layoutId 传入布局用来跳过在子类中初始化传入 inflater</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">BaseFragment</span>&lt;<span class="type">T : ViewBinding</span>&gt;(<span class="keyword">private</span> <span class="keyword">val</span> layoutId: <span class="built_in">Int</span>) : Fragment(layoutId) &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> isViewOK = <span class="literal">false</span> <span class="comment">//是否完成 View 初始化</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> isFirst = <span class="literal">true</span> <span class="comment">//是否为第一次加载</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> _binding: T? = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> binding <span class="keyword">get</span>() = _binding!!</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreateView</span><span class="params">(inflater: <span class="type">LayoutInflater</span>, container: <span class="type">ViewGroup</span>?, savedInstanceState: <span class="type">Bundle</span>?)</span></span>: View? &#123;</span><br><span class="line">        <span class="keyword">val</span> view = inflater.inflate(layoutId, container, <span class="literal">false</span>)</span><br><span class="line">        <span class="comment">// 完成 initView 后改变view的初始化状态为完成</span></span><br><span class="line">        isViewOK = <span class="literal">true</span></span><br><span class="line">        <span class="keyword">return</span> view</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onViewCreated</span><span class="params">(view: <span class="type">View</span>, savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onViewCreated(view, savedInstanceState)</span><br><span class="line">        _binding = initBinding(view)</span><br><span class="line">        initView()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 传入对应的 ViewBinding</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">abstract</span> <span class="function"><span class="keyword">fun</span> <span class="title">initBinding</span><span class="params">(view: <span class="type">View</span>)</span></span>: T</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * fragment 初始化 view 的方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">abstract</span> <span class="function"><span class="keyword">fun</span> <span class="title">initView</span><span class="params">()</span></span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onResume</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onResume()</span><br><span class="line">        <span class="comment">//在 onResume 进行数据懒加载</span></span><br><span class="line">        initLoadData()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">initLoadData</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (isViewOK &amp;&amp; isFirst) &#123;</span><br><span class="line">            <span class="comment">//加载数据时判断是否完成view的初始化，以及是不是第一次加载此数据</span></span><br><span class="line">            loadDate()</span><br><span class="line">            <span class="comment">//加载第一次数据后改变状态，后续不再重复加载</span></span><br><span class="line">            isFirst = <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * fragment 实现懒加载的方法，即在这里加载数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">abstract</span> <span class="function"><span class="keyword">fun</span> <span class="title">loadDate</span><span class="params">()</span></span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//释放数据</span></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onDestroyView</span><span class="params">()</span></span> &#123;</span><br><span class="line">        _binding = <span class="literal">null</span></span><br><span class="line">        <span class="keyword">super</span>.onDestroyView()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>没什么好说的，主要的东西我都写在注释里了，只有两点要注意下：</p>
+<ul>
+<li>class 必须声明为 abstract 这样才能让子类去实现懒加载的方法</li>
+<li>注意 <code>_binding</code> 和 <code>binding</code>，这两个一个对外一个对内，对内的注意在 onDestroyView 进行释放，以免内存泄漏</li>
+</ul>
+<h2 id="子类-TestFragment">子类 TestFragment</h2>
+<p>那我们看看这个应该如何使用吧
+（假设你的 Fragment 的布局名称是 fragment_test，里面有一个 id 为 tvMain 的 TextView）</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TestFragment</span> : <span class="type">BaseFragment</span>&lt;<span class="type">FragmentTestBinding</span>&gt;(R.layout.fragment_test) &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">initBinding</span><span class="params">(view: <span class="type">View</span>)</span></span>: FragmentTestBinding &#123;</span><br><span class="line">        <span class="keyword">return</span> FragmentTestBinding.bind(view)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">initView</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="comment">// 这里是初始化 View 的方法</span></span><br><span class="line">        binding.tvMain.text = <span class="string">&quot;HI&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">loadDate</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="comment">// 这里的初始化了数据的方法</span></span><br><span class="line">        Toast.makeText(activity,<span class="string">&quot;我初始化了数据&quot;</span>,Toast.LENGTH_SHORT).show()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>跟简单吧，做到了 View 与数据的分离</p>
+<h2 id="ViewAdapter-的处理">ViewAdapter 的处理</h2>
+<p>那说了这么多，「那个参数」 到底在哪里呢？来了来了，不过我们要先写一个 adapter 才可以</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ViewPagerAdapter</span> <span class="keyword">constructor</span> (</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> fragmentManager: FragmentManager,</span><br><span class="line">    <span class="comment">// 注意看这个参数</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> behavior: <span class="built_in">Int</span>,</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> fragmentList: List&lt;BaseFragment&lt;*&gt;&gt;</span><br><span class="line">) :</span><br><span class="line">    FragmentPagerAdapter(fragmentManager, behavior) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">getItem</span><span class="params">(position: <span class="type">Int</span>)</span></span>: Fragment = fragmentList[position]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">getCount</span><span class="params">()</span></span>: <span class="built_in">Int</span> = fragmentList.size</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代码很简单，只是重写了几个方法而已，不过接下来才是重点,在调用传入的时候我们需要转入重要的参数</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">viewPager.adapter = ViewPagerAdapter(</span><br><span class="line">            supportFragmentManager,</span><br><span class="line">            <span class="comment">// 看这里</span></span><br><span class="line">            FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,</span><br><span class="line">            fragmentList</span><br><span class="line">        )</span><br><span class="line"><span class="comment">// 设置预加载的数量，来测试懒加载是否成功</span></span><br><span class="line">viewPager.offscreenPageLimit = <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p>注意看我们传入了 <code>FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT</code>，这个参数就是作为限制 Fragment 生命周期而存在的。</p>
+<p>这样就简单的实现了需要的功能了。</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>踩坑</tag>
+        <tag>Android</tag>
+        <tag>ViewPager</tag>
+        <tag>Fragment</tag>
+        <tag>Kotlin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>怎么呼吸</title>
+    <url>/posts/b0821049/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>不能呼吸的时候
+是不是很难受？
+这只海龟也是这么觉得的
+<img src="../../media/article_img/how2_breathe/%E6%B5%B7%E9%BE%9F.jpg" alt="image">
+<strong>怎么救它？</strong>
+尽量不去用一次性的塑料产品
+比如 不买一次性塑料袋
+喝饮料的时候不要用吸管
+放一双公筷
+点外卖的时候选择「不要餐具」
+随身带一个保温杯
+不强求一步到位
+也不去强迫别人
+改变
+从自身的一点点
+到地球的「亿」点点</p>
+]]></content>
+      <categories>
+        <category>正经文字</category>
+      </categories>
+      <tags>
+        <tag>环保</tag>
+        <tag>塑料产品</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>updateConfiguration 弃用之后更换语言应该何去何从</title>
+    <url>/posts/9e078f24/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><div class="note info flat"><p>注意本文使用的语言的是 Kotlin，如需 Java 请自行转换或在网络自行搜索，本文的 minSDK 为 21</p>
+</div>
+<h2 id="弃用">弃用</h2>
+<p>通常提起 Android 程序更换语言可能会想到 <code>Context</code> 的 <code>getResources().updateConfiguration(configuration, displayMetrics)</code>,传入设置好 <code>Locale</code> 的 <code>configuration</code> 以及 <code>Context</code> 的 <code>getResources().getDisplayMetrics()</code>。</p>
+<p>然而这个方法在现在已经被标记为 deprecated，这意味着以后的版本可能用不了这个了。</p>
+<blockquote>
+<p>这是官方的信息：
+‘updateConfiguration(android.content.res.Configuration, android.util.DisplayMetrics)’ is deprecated
+Deprecated
+See android.content.Context.createConfigurationContext(Configuration).</p>
+</blockquote>
+<p>那简单了，我们只需要看看 <code>Context.createConfigurationContext(Configuration)</code> 怎么使用就可以了，分析一下，这个方法是返回一个 <code>Context</code>，那我们只需要重写一下 <code>ContextWrapper</code> 就好了,这样获取到的就是用一个 <code>Context</code>，保证更换语言成功。</p>
+<h2 id="重写-ContextWrapper">重写 ContextWrapper</h2>
+<p>这是我写好的 <code>ContextWrapper</code>，比较简单，需要说明的东西我都写在注释了：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">open</span> <span class="keyword">class</span> <span class="title class_">ContextWrapper</span>(base: Context?) : ContextWrapper(base) &#123;</span><br><span class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</span><br><span class="line">        <span class="comment">//这里使用注解保证编译通过</span></span><br><span class="line">        <span class="meta">@RequiresApi(Build.VERSION_CODES.N)</span></span><br><span class="line">        <span class="function"><span class="keyword">fun</span> <span class="title">wrap</span><span class="params">(context: <span class="type">Context</span>, newLocale: <span class="type">Locale</span>?)</span></span>: ContextWrapper &#123;</span><br><span class="line">            <span class="keyword">var</span> mContext = context</span><br><span class="line">            <span class="keyword">val</span> res: Resources = mContext.resources</span><br><span class="line">            <span class="keyword">val</span> configuration: Configuration = res.configuration</span><br><span class="line">            <span class="comment">//注意 Android 7.0 前后的不同处理方法</span></span><br><span class="line">            mContext = <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) &#123;</span><br><span class="line">                configuration.setLocale(newLocale)</span><br><span class="line">                <span class="keyword">val</span> localeList = LocaleList(newLocale)</span><br><span class="line">                LocaleList.setDefault(localeList)</span><br><span class="line">                configuration.setLocales(localeList)</span><br><span class="line">                mContext.createConfigurationContext(configuration)</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                configuration.setLocale(newLocale)</span><br><span class="line">                mContext.createConfigurationContext(configuration)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> ContextWrapper(mContext)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="准备好切换工具">准备好切换工具</h2>
+<p>我这里准备了一个语言的工具类可以参考一下：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">object</span> LanguageUtil &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置语言的值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> context 上下文</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> lan 需要设置的语言</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">setLanguage</span><span class="params">(context: <span class="type">Context</span>, lan: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">        context.getSharedPreferences(<span class="string">&quot;settings&quot;</span>, <span class="number">0</span>).edit &#123;</span><br><span class="line">            putString(<span class="string">&quot;language&quot;</span>, lan)</span><br><span class="line">            <span class="keyword">this</span>.commit()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取应用于选择语言对话框的 checkedItem</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">getCheckedItem</span><span class="params">(context: <span class="type">Context</span>)</span></span>: <span class="built_in">Int</span> =</span><br><span class="line">        <span class="keyword">when</span> (context.getSharedPreferences(<span class="string">&quot;settings&quot;</span>, <span class="number">0</span>).getString(<span class="string">&quot;language&quot;</span>, <span class="string">&quot;cn&quot;</span>)) &#123;</span><br><span class="line">            <span class="string">&quot;auto&quot;</span> -&gt; <span class="number">0</span></span><br><span class="line">            <span class="string">&quot;zh-rCN&quot;</span> -&gt; <span class="number">1</span></span><br><span class="line">            <span class="string">&quot;zh-rTW&quot;</span> -&gt; <span class="number">2</span></span><br><span class="line">            <span class="string">&quot;en&quot;</span> -&gt; <span class="number">3</span></span><br><span class="line">            <span class="keyword">else</span> -&gt; <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取当前设置的 Locale</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">getLocale</span><span class="params">(context: <span class="type">Context</span>)</span></span>: Locale =</span><br><span class="line">        <span class="keyword">when</span> (context.getSharedPreferences(<span class="string">&quot;settings&quot;</span>, <span class="number">0</span>).getString(<span class="string">&quot;language&quot;</span>, <span class="string">&quot;cn&quot;</span>)) &#123;</span><br><span class="line">            <span class="string">&quot;auto&quot;</span> -&gt; getSysLocale()</span><br><span class="line">            <span class="string">&quot;zh-rCN&quot;</span> -&gt; Locale(<span class="string">&quot;zh&quot;</span>, <span class="string">&quot;CN&quot;</span>)</span><br><span class="line">            <span class="string">&quot;zh-rTW&quot;</span> -&gt; Locale(<span class="string">&quot;zh&quot;</span>, <span class="string">&quot;TW&quot;</span>)</span><br><span class="line">            <span class="string">&quot;en&quot;</span> -&gt; Locale(<span class="string">&quot;en&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span> -&gt; getSysLocale()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取当前系统的 Locale</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">getSysLocale</span><span class="params">()</span></span>: Locale = <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) &#123;</span><br><span class="line">        LocaleList.getDefault()[<span class="number">0</span>]</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        Locale.getDefault()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里使用了 <code>object</code> 关键字让他变成一个单例类，而且我选择的是把设置的语言信息通过 <code>SharedPreferences</code> 进行存储，这里根据你的实际情况来调整就 OK。</p>
+<h2 id="使用">使用</h2>
+<p>在<strong>每一个</strong> <code>Activity</code> 或者你封装好的 <code>BaseActivity</code> 里重写这样的方法即可：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RequiresApi(Build.VERSION_CODES.N)</span></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">attachBaseContext</span><span class="params">(newBase: <span class="type">Context</span>?)</span></span> &#123;</span><br><span class="line">    <span class="comment">//如果不使用工具类也可以在这里处理好 Locale 传入</span></span><br><span class="line">    <span class="keyword">val</span> context = newBase?.let &#123;</span><br><span class="line">        ContextWrapper.wrap(newBase,LanguageUtil.getLocale(newBase))</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">super</span>.attachBaseContext(context)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就可以正常的切换语言了</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>踩坑</tag>
+        <tag>Android</tag>
+        <tag>Kotlin</tag>
+        <tag>弃用</tag>
       </tags>
   </entry>
   <entry>
@@ -1532,130 +1673,6 @@ duang~
       </tags>
   </entry>
   <entry>
-    <title>使用 Kotlin 编写一个懒加载与 ViewBinding 的 Fragment</title>
-    <url>/posts/51f7c2cb/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>有关 ViewBinding 的用法看 <a href="https://developer.android.google.cn/topic/libraries/view-binding">这里</a></p>
-<p>最近在学习 Kotlin 的时候有遇到需要封装一个拥有懒加载功能的 Fragment，并且我还想用上新的 ViewBinding 功能。
-那么第一个实现比较简单的，之前在 Java 也封装过，唯一的问题就是之前使用的是重写 <code>setUserVisibleHint</code> 方法来实现的，不过这个方法已经被标记为 <code>deprecated</code>（弃用的）了，指不定那一天就用不了了。
-根据官方的提示：</p>
-<blockquote>
-<p>Deprecated
-Use FragmentTransaction.setMaxLifecycle(Fragment, Lifecycle.State) instead.</p>
-</blockquote>
-<p>我们现在应该去调用 <code>setMaxLifecycle</code> 方法来实现这个功能，使用 <code>setMaxLifecycle</code> 来限制了 Fragment 的生命周期，Fragment 的 <code>onReseume()</code> 只有当 Fragment 显示在屏幕上时才会执行，这样就可以把加载数据的方法放在 <code>onResume()</code> 方法中来实现懒加载了。
-在 <code>FragmentPagerAdapter</code> 适配器构造方法中有一个 <code>behavior</code> 参数，我们只需要传入一个参数就可以限制他的生命周期了。</p>
-<p>那么剩下的就是 <code>ViewBinding</code> 了，这个只需要在继承的时候传入参数就好了，那就开始动手</p>
-<h2 id="BaseFragment-部分">BaseFragment 部分</h2>
-<p>首先贴上代码</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 封装一个有懒加载的 Fragment</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> T 传入泛型的 ViewBinding</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> layoutId 传入布局用来跳过在子类中初始化传入 inflater</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">BaseFragment</span>&lt;<span class="type">T : ViewBinding</span>&gt;(<span class="keyword">private</span> <span class="keyword">val</span> layoutId: <span class="built_in">Int</span>) : Fragment(layoutId) &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> isViewOK = <span class="literal">false</span> <span class="comment">//是否完成 View 初始化</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> isFirst = <span class="literal">true</span> <span class="comment">//是否为第一次加载</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> _binding: T? = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> binding <span class="keyword">get</span>() = _binding!!</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreateView</span><span class="params">(inflater: <span class="type">LayoutInflater</span>, container: <span class="type">ViewGroup</span>?, savedInstanceState: <span class="type">Bundle</span>?)</span></span>: View? &#123;</span><br><span class="line">        <span class="keyword">val</span> view = inflater.inflate(layoutId, container, <span class="literal">false</span>)</span><br><span class="line">        <span class="comment">// 完成 initView 后改变view的初始化状态为完成</span></span><br><span class="line">        isViewOK = <span class="literal">true</span></span><br><span class="line">        <span class="keyword">return</span> view</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onViewCreated</span><span class="params">(view: <span class="type">View</span>, savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onViewCreated(view, savedInstanceState)</span><br><span class="line">        _binding = initBinding(view)</span><br><span class="line">        initView()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 传入对应的 ViewBinding</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">abstract</span> <span class="function"><span class="keyword">fun</span> <span class="title">initBinding</span><span class="params">(view: <span class="type">View</span>)</span></span>: T</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * fragment 初始化 view 的方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">abstract</span> <span class="function"><span class="keyword">fun</span> <span class="title">initView</span><span class="params">()</span></span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onResume</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onResume()</span><br><span class="line">        <span class="comment">//在 onResume 进行数据懒加载</span></span><br><span class="line">        initLoadData()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">initLoadData</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (isViewOK &amp;&amp; isFirst) &#123;</span><br><span class="line">            <span class="comment">//加载数据时判断是否完成view的初始化，以及是不是第一次加载此数据</span></span><br><span class="line">            loadDate()</span><br><span class="line">            <span class="comment">//加载第一次数据后改变状态，后续不再重复加载</span></span><br><span class="line">            isFirst = <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * fragment 实现懒加载的方法，即在这里加载数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">abstract</span> <span class="function"><span class="keyword">fun</span> <span class="title">loadDate</span><span class="params">()</span></span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//释放数据</span></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onDestroyView</span><span class="params">()</span></span> &#123;</span><br><span class="line">        _binding = <span class="literal">null</span></span><br><span class="line">        <span class="keyword">super</span>.onDestroyView()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>没什么好说的，主要的东西我都写在注释里了，只有两点要注意下：</p>
-<ul>
-<li>class 必须声明为 abstract 这样才能让子类去实现懒加载的方法</li>
-<li>注意 <code>_binding</code> 和 <code>binding</code>，这两个一个对外一个对内，对内的注意在 onDestroyView 进行释放，以免内存泄漏</li>
-</ul>
-<h2 id="子类-TestFragment">子类 TestFragment</h2>
-<p>那我们看看这个应该如何使用吧
-（假设你的 Fragment 的布局名称是 fragment_test，里面有一个 id 为 tvMain 的 TextView）</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TestFragment</span> : <span class="type">BaseFragment</span>&lt;<span class="type">FragmentTestBinding</span>&gt;(R.layout.fragment_test) &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">initBinding</span><span class="params">(view: <span class="type">View</span>)</span></span>: FragmentTestBinding &#123;</span><br><span class="line">        <span class="keyword">return</span> FragmentTestBinding.bind(view)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">initView</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="comment">// 这里是初始化 View 的方法</span></span><br><span class="line">        binding.tvMain.text = <span class="string">&quot;HI&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">loadDate</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="comment">// 这里的初始化了数据的方法</span></span><br><span class="line">        Toast.makeText(activity,<span class="string">&quot;我初始化了数据&quot;</span>,Toast.LENGTH_SHORT).show()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>跟简单吧，做到了 View 与数据的分离</p>
-<h2 id="ViewAdapter-的处理">ViewAdapter 的处理</h2>
-<p>那说了这么多，「那个参数」 到底在哪里呢？来了来了，不过我们要先写一个 adapter 才可以</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ViewPagerAdapter</span> <span class="keyword">constructor</span> (</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> fragmentManager: FragmentManager,</span><br><span class="line">    <span class="comment">// 注意看这个参数</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> behavior: <span class="built_in">Int</span>,</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> fragmentList: List&lt;BaseFragment&lt;*&gt;&gt;</span><br><span class="line">) :</span><br><span class="line">    FragmentPagerAdapter(fragmentManager, behavior) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">getItem</span><span class="params">(position: <span class="type">Int</span>)</span></span>: Fragment = fragmentList[position]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">getCount</span><span class="params">()</span></span>: <span class="built_in">Int</span> = fragmentList.size</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>代码很简单，只是重写了几个方法而已，不过接下来才是重点,在调用传入的时候我们需要转入重要的参数</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">viewPager.adapter = ViewPagerAdapter(</span><br><span class="line">            supportFragmentManager,</span><br><span class="line">            <span class="comment">// 看这里</span></span><br><span class="line">            FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,</span><br><span class="line">            fragmentList</span><br><span class="line">        )</span><br><span class="line"><span class="comment">// 设置预加载的数量，来测试懒加载是否成功</span></span><br><span class="line">viewPager.offscreenPageLimit = <span class="number">4</span></span><br></pre></td></tr></table></figure>
-<p>注意看我们传入了 <code>FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT</code>，这个参数就是作为限制 Fragment 生命周期而存在的。</p>
-<p>这样就简单的实现了需要的功能了。</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>踩坑</tag>
-        <tag>Android</tag>
-        <tag>Fragment</tag>
-        <tag>ViewPager</tag>
-        <tag>Kotlin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何优雅的使用 Material Design 2</title>
-    <url>/posts/9cb48aa5/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="简介">简介</h3>
-<p>Material Design 2 （下面简称 MD2）已经发布了一段时间了，可是还有一些小伙伴不知道怎么迁移到 MD2 来，我也是查了不少资料才摸索出来的</p>
-<h3 id="AndroidX">AndroidX</h3>
-<p>首先，需要迁移到 AndroidX 来，这个网上有很多教程了，AndroidStudio 和 IDEA 也有相关的功能，这里就不赘述了</p>
-<h3 id="修改主题">修改主题</h3>
-<p>然后，需要修改 <code>styles.xml</code> 中的内容了，修改你之前的主题为</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;style name=<span class="string">&quot;AppTheme&quot;</span> parent=<span class="string">&quot;Theme.MaterialComponents.Light.NoActionBar&quot;</span>&gt;<span class="string">&quot;</span></span><br></pre></td></tr></table></figure>
-<p>当然还有其他可选的</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Theme.MaterialComponents</span><br><span class="line">Theme.MaterialComponents.Light</span><br><span class="line">Theme.MaterialComponents.NoActionBar</span><br><span class="line">Theme.MaterialComponents.Light.NoActionBar</span><br><span class="line">Theme.MaterialComponents.Light.DarkActionBar</span><br></pre></td></tr></table></figure>
-<p>如果只想对 Material 组件生效那就用</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Theme.MaterialComponents.Bridge</span><br><span class="line">Theme.MaterialComponents.Light.Bridge</span><br><span class="line">Theme.MaterialComponents.NoActionBar.Bridge</span><br><span class="line">Theme.MaterialComponents.Light.NoActionBar.Bridge</span><br><span class="line">Theme.MaterialComponents.Light.DarkActionBar.Bridge</span><br></pre></td></tr></table></figure>
-<p>仅仅是这一个操作就完成了大部分任务了，现在编译就可以看到一些新特性了
-不过肯定没有这么简单，所以这里来讲解一些坑</p>
-<h3 id="开始踩坑">开始踩坑</h3>
-<h4 id="FloatingActionButton-颜色问题">FloatingActionButton 颜色问题</h4>
-<p>对，你没看错，MD2 默认的 FAB 颜色有一点问题<br>
-默认情况下背景色不是主题的强调色，图标的颜色也是黑的，很丑，那么怎么解决呢？
-很简单，添加</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">app:backgroundTint=<span class="string">&quot;?attr/colorAccent&quot;</span></span><br><span class="line">app:tint=<span class="string">&quot;@android:color/white&quot;</span></span><br></pre></td></tr></table></figure>
-<p>这两行到 FAB 的属性，即</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;com.google.android.material.floatingactionbutton.FloatingActionButton</span><br><span class="line">    android:layout_width=<span class="string">&quot;wrap_content&quot;</span></span><br><span class="line">    android:layout_height=<span class="string">&quot;wrap_content&quot;</span></span><br><span class="line">    android:id=<span class="string">&quot;@+id/fab_chat_edit&quot;</span></span><br><span class="line">        app:backgroundTint=<span class="string">&quot;?attr/colorAccent&quot;</span></span><br><span class="line">        app:tint=<span class="string">&quot;@android:color/white&quot;</span>/&gt;</span><br></pre></td></tr></table></figure>
-<p>这样就完成啦，背景色是主题的强调色，图标是白色，就和以前的一样了，当然也可以修改为其他的颜色</p>
-<h4 id="布局的-Design-界面不能预览">布局的 Design 界面不能预览</h4>
-<p>这个就比较麻烦了，好像只有第一次启动 IDE 的时候能正常看到布局，过一会就无法预览了，提示异常，感觉是个 Bug，临时的解决办法就是修改主题，xml布局界面上边修改主题为旧版本的即可，这样改以后布局可以看，只是 material 的效果都没了，很难受</p>
-<p>还有一种办法，参考 <a href="https://stackoverflow.com/questions/55791884/cannot-render-materialbutton-with-android-material1-1-x">StackOverflow</a> 比较简单的办法,添加一个预览的style</p>
-<p>最后还有一种说是 Android Studio 3.5 修复了，不过我是 IDEA 就不太清楚了</p>
-<h3 id="待续">待续</h3>
-<p>暂时遇到这些，后面还有的话也记录上来</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>踩坑</tag>
-        <tag>Android</tag>
-        <tag>Material Design 2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>updateConfiguration 弃用之后更换语言应该何去何从</title>
-    <url>/posts/9e078f24/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><div class="note info flat"><p>注意本文使用的语言的是 Kotlin，如需 Java 请自行转换或在网络自行搜索，本文的 minSDK 为 21</p>
-</div>
-<h2 id="弃用">弃用</h2>
-<p>通常提起 Android 程序更换语言可能会想到 <code>Context</code> 的 <code>getResources().updateConfiguration(configuration, displayMetrics)</code>,传入设置好 <code>Locale</code> 的 <code>configuration</code> 以及 <code>Context</code> 的 <code>getResources().getDisplayMetrics()</code>。</p>
-<p>然而这个方法在现在已经被标记为 deprecated，这意味着以后的版本可能用不了这个了。</p>
-<blockquote>
-<p>这是官方的信息：
-‘updateConfiguration(android.content.res.Configuration, android.util.DisplayMetrics)’ is deprecated
-Deprecated
-See android.content.Context.createConfigurationContext(Configuration).</p>
-</blockquote>
-<p>那简单了，我们只需要看看 <code>Context.createConfigurationContext(Configuration)</code> 怎么使用就可以了，分析一下，这个方法是返回一个 <code>Context</code>，那我们只需要重写一下 <code>ContextWrapper</code> 就好了,这样获取到的就是用一个 <code>Context</code>，保证更换语言成功。</p>
-<h2 id="重写-ContextWrapper">重写 ContextWrapper</h2>
-<p>这是我写好的 <code>ContextWrapper</code>，比较简单，需要说明的东西我都写在注释了：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">open</span> <span class="keyword">class</span> <span class="title class_">ContextWrapper</span>(base: Context?) : ContextWrapper(base) &#123;</span><br><span class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</span><br><span class="line">        <span class="comment">//这里使用注解保证编译通过</span></span><br><span class="line">        <span class="meta">@RequiresApi(Build.VERSION_CODES.N)</span></span><br><span class="line">        <span class="function"><span class="keyword">fun</span> <span class="title">wrap</span><span class="params">(context: <span class="type">Context</span>, newLocale: <span class="type">Locale</span>?)</span></span>: ContextWrapper &#123;</span><br><span class="line">            <span class="keyword">var</span> mContext = context</span><br><span class="line">            <span class="keyword">val</span> res: Resources = mContext.resources</span><br><span class="line">            <span class="keyword">val</span> configuration: Configuration = res.configuration</span><br><span class="line">            <span class="comment">//注意 Android 7.0 前后的不同处理方法</span></span><br><span class="line">            mContext = <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) &#123;</span><br><span class="line">                configuration.setLocale(newLocale)</span><br><span class="line">                <span class="keyword">val</span> localeList = LocaleList(newLocale)</span><br><span class="line">                LocaleList.setDefault(localeList)</span><br><span class="line">                configuration.setLocales(localeList)</span><br><span class="line">                mContext.createConfigurationContext(configuration)</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                configuration.setLocale(newLocale)</span><br><span class="line">                mContext.createConfigurationContext(configuration)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> ContextWrapper(mContext)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="准备好切换工具">准备好切换工具</h2>
-<p>我这里准备了一个语言的工具类可以参考一下：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">object</span> LanguageUtil &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置语言的值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> context 上下文</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> lan 需要设置的语言</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">setLanguage</span><span class="params">(context: <span class="type">Context</span>, lan: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">        context.getSharedPreferences(<span class="string">&quot;settings&quot;</span>, <span class="number">0</span>).edit &#123;</span><br><span class="line">            putString(<span class="string">&quot;language&quot;</span>, lan)</span><br><span class="line">            <span class="keyword">this</span>.commit()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取应用于选择语言对话框的 checkedItem</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">getCheckedItem</span><span class="params">(context: <span class="type">Context</span>)</span></span>: <span class="built_in">Int</span> =</span><br><span class="line">        <span class="keyword">when</span> (context.getSharedPreferences(<span class="string">&quot;settings&quot;</span>, <span class="number">0</span>).getString(<span class="string">&quot;language&quot;</span>, <span class="string">&quot;cn&quot;</span>)) &#123;</span><br><span class="line">            <span class="string">&quot;auto&quot;</span> -&gt; <span class="number">0</span></span><br><span class="line">            <span class="string">&quot;zh-rCN&quot;</span> -&gt; <span class="number">1</span></span><br><span class="line">            <span class="string">&quot;zh-rTW&quot;</span> -&gt; <span class="number">2</span></span><br><span class="line">            <span class="string">&quot;en&quot;</span> -&gt; <span class="number">3</span></span><br><span class="line">            <span class="keyword">else</span> -&gt; <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取当前设置的 Locale</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">getLocale</span><span class="params">(context: <span class="type">Context</span>)</span></span>: Locale =</span><br><span class="line">        <span class="keyword">when</span> (context.getSharedPreferences(<span class="string">&quot;settings&quot;</span>, <span class="number">0</span>).getString(<span class="string">&quot;language&quot;</span>, <span class="string">&quot;cn&quot;</span>)) &#123;</span><br><span class="line">            <span class="string">&quot;auto&quot;</span> -&gt; getSysLocale()</span><br><span class="line">            <span class="string">&quot;zh-rCN&quot;</span> -&gt; Locale(<span class="string">&quot;zh&quot;</span>, <span class="string">&quot;CN&quot;</span>)</span><br><span class="line">            <span class="string">&quot;zh-rTW&quot;</span> -&gt; Locale(<span class="string">&quot;zh&quot;</span>, <span class="string">&quot;TW&quot;</span>)</span><br><span class="line">            <span class="string">&quot;en&quot;</span> -&gt; Locale(<span class="string">&quot;en&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span> -&gt; getSysLocale()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取当前系统的 Locale</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">getSysLocale</span><span class="params">()</span></span>: Locale = <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) &#123;</span><br><span class="line">        LocaleList.getDefault()[<span class="number">0</span>]</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        Locale.getDefault()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里使用了 <code>object</code> 关键字让他变成一个单例类，而且我选择的是把设置的语言信息通过 <code>SharedPreferences</code> 进行存储，这里根据你的实际情况来调整就 OK。</p>
-<h2 id="使用">使用</h2>
-<p>在<strong>每一个</strong> <code>Activity</code> 或者你封装好的 <code>BaseActivity</code> 里重写这样的方法即可：</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RequiresApi(Build.VERSION_CODES.N)</span></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">attachBaseContext</span><span class="params">(newBase: <span class="type">Context</span>?)</span></span> &#123;</span><br><span class="line">    <span class="comment">//如果不使用工具类也可以在这里处理好 Locale 传入</span></span><br><span class="line">    <span class="keyword">val</span> context = newBase?.let &#123;</span><br><span class="line">        ContextWrapper.wrap(newBase,LanguageUtil.getLocale(newBase))</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">super</span>.attachBaseContext(context)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样就可以正常的切换语言了</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>踩坑</tag>
-        <tag>Android</tag>
-        <tag>Kotlin</tag>
-        <tag>弃用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一些 WordPress 主题</title>
     <url>/posts/dc790cfc/</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>一些 WordPress 主题，好像都是来自吾爱破解，在这里记录一下</p>
@@ -1673,29 +1690,6 @@ See android.content.Context.createConfigurationContext(Configuration).</p>
       </categories>
       <tags>
         <tag>WordPress</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flutter 实现图片下划线的 TabBar</title>
-    <url>/posts/51bf3ff2/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>最近在公司写项目的时候遇到了要把 TabBar 的下划线改成图片样式的，但是官方组件似乎没有提供，在网上也搜不到相关的内容，很是苦恼。后来找到了 <a href="https://medium.com/swlh/flutter-custom-tab-indicator-for-tabbar-d72bbc6c9d0c">Flutter: Custom tab indicator for TabBar</a> 这篇文章，发现他自定义为圆形的方法很简洁，或许可以来<s>抄袭</s>借鉴一下。</p>
-<h2 id="创建必须组件">创建必须组件</h2>
-<p>首先创建一个 <code>custom_tabbar.dart</code> 来放我们自定义的 TabBar，这样方便复用，里面的代码如下</p>
-<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomTabBar</span> <span class="keyword">extends</span> <span class="title">StatefulWidget</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> CustomTabBar(&#123;</span><br><span class="line">    Key key,</span><br><span class="line">    <span class="meta">@required</span> <span class="keyword">this</span>.tabs,</span><br><span class="line">    <span class="meta">@required</span> <span class="keyword">this</span>.imagePath,</span><br><span class="line">    <span class="meta">@required</span> <span class="keyword">this</span>.controller,</span><br><span class="line">  &#125;) : <span class="keyword">assert</span>(tabs != <span class="keyword">null</span>),</span><br><span class="line">        <span class="keyword">super</span>(key: key);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">List</span>&lt;Widget&gt; tabs;</span><br><span class="line">  <span class="keyword">final</span> TabController controller;</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">String</span> imagePath;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  _CustomTabBarrState createState() =&gt; _CustomTabBarState();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_CustomTabBarState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">CustomTabBar</span>&gt; </span>&#123;</span><br><span class="line">  ui.Image _image;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    loadImage(widget.imagePath).then(</span><br><span class="line">          (value) =&gt; setState(</span><br><span class="line">            () &#123;</span><br><span class="line">          _image = value;</span><br><span class="line">        &#125;,</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> TabBar(</span><br><span class="line">      tabs: widget.tabs,</span><br><span class="line">      controller: widget.controller,</span><br><span class="line">      indicator: ImageTabIndicator(image: _image),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用 StatefulWidget 是因为获取到图片之后要刷新一下布局，不然里面的下划线都是空的了，<code>loadImage</code> 是一个从 Assets 获取图片转换到 Image 的方法，这是 <code>dart:ui</code> 包下面的，方法代码如下：</p>
-<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter/services.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;dart:ui&#x27;</span> <span class="keyword">as</span> ui;</span><br><span class="line"></span><br><span class="line">Future&lt;ui.Image&gt; loadImage(<span class="built_in">String</span> path) <span class="keyword">async</span> &#123;</span><br><span class="line">  ByteData data = <span class="keyword">await</span> rootBundle.load(path);</span><br><span class="line">  ui.Codec codec = <span class="keyword">await</span> ui.instantiateImageCodec(data.buffer.asUint8List());</span><br><span class="line">  ui.FrameInfo fi = <span class="keyword">await</span> codec.getNextFrame();</span><br><span class="line">  <span class="keyword">return</span> fi.image;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注意这是一个异步方法</p>
-<h2 id="实现图片下划线">实现图片下划线</h2>
-<p>刚才在 <code>custom_tabbar.dart</code> 看到了有一个 <code>ImageTabIndicator</code>，这就是要实现下划线的地方了，里面的代码也比较简单</p>
-<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImageTabIndicator</span> <span class="keyword">extends</span> <span class="title">Decoration</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> BoxPainter _painter;</span><br><span class="line"></span><br><span class="line">  ImageTabIndicator(&#123;<span class="built_in">double</span> radius = <span class="number">10</span>, <span class="meta">@required</span> ui.Image image&#125;)</span><br><span class="line">      : _painter = _ImagePainter(radius, image);</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  BoxPainter createBoxPainter([onChanged]) =&gt; _painter;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_ImagePainter</span> <span class="keyword">extends</span> <span class="title">BoxPainter</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> Paint _paint;</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">double</span> radius;</span><br><span class="line">  <span class="keyword">final</span> ui.Image image;</span><br><span class="line"></span><br><span class="line">  _ImagePainter(<span class="keyword">this</span>.radius, <span class="keyword">this</span>.image)</span><br><span class="line">      : _paint = Paint()</span><br><span class="line">          ..isAntiAlias = <span class="keyword">true</span></span><br><span class="line">          ..strokeCap = StrokeCap.round;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> paint(Canvas canvas, Offset offset, ImageConfiguration cfg) &#123;</span><br><span class="line">    <span class="keyword">if</span> (image != <span class="keyword">null</span>) &#123;</span><br><span class="line">      <span class="keyword">final</span> Offset imageOffset = offset +</span><br><span class="line">          Offset(cfg.size.width / <span class="number">2</span>, cfg.size.height / <span class="number">2</span> + image.height + <span class="number">2</span>);</span><br><span class="line">      paintImage(</span><br><span class="line">          canvas: canvas,</span><br><span class="line">          rect: Rect.fromCircle(center: imageOffset, radius: radius),</span><br><span class="line">          image: image,</span><br><span class="line">          fit: BoxFit.fitWidth);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里没什么好说的，就是去画传进来的图片，不过这里的位置需要去自己调整。另外不能用 <code>Paint</code> 画，一定要用 <a href="https://api.flutter.dev/flutter/painting/paintImage.html"><code>paintImage</code></a> 来画,他有一个转换方法，使用 <code>Paint</code> 会变成背景。</p>
-<p>17 行这个 <code>Paint</code> 的初始化说实话应该不存在了，但是我试着删除他之后绘制就没了，很奇怪我就留着了。</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>Flutter</tag>
       </tags>
   </entry>
   <entry>
@@ -1777,6 +1771,40 @@ See android.content.Context.createConfigurationContext(Configuration).</p>
       </tags>
   </entry>
   <entry>
+    <title>如何使用 Dolphin Emulator 玩《星之卡比：Wii》</title>
+    <url>/posts/2fbba4ed/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote>
+<p>开头附上星之卡比系列的 <a href="https://eyun.baidu.com/s/3i51Jf17">下载地址</a> 还有 Wii 模拟器的 <a href="https://cn.dolphin-emu.org/">下载地址</a></p>
+</blockquote>
+<h2 id="白屏">白屏</h2>
+<p>有些小伙伴在下好游戏并且在模拟器打开之后会遇到一直卡在白屏的情况，如图</p>
+<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E5%8D%A1%E5%9C%A8%E7%99%BD%E5%B1%8F.png" alt="卡在白屏"></p>
+<p>那么这个时候就要注意是不是模拟器语言设置的问题，我们可以在这里看到游戏的语言</p>
+<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E6%9F%A5%E7%9C%8B%E8%AF%AD%E8%A8%80.png" alt="查看语言"></p>
+<p>那么可以看到这个语言是 <code>日语</code>，那我们就要把模拟器改成对应的，看图操作，找到 <code>设置 -&gt; Wii -&gt; 系统语言</code>，然后在下拉菜单里找到 <code>对应语言</code>，然后点击关闭即可</p>
+<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E4%BF%AE%E6%94%B9%E8%AF%AD%E8%A8%80.png" alt="修改语言"></p>
+<p>现在开始游戏就可以正常运行了</p>
+<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C.png" alt="正常运行"></p>
+<h2 id="无法进入">无法进入</h2>
+<p>那有时候还会出现无法进入游戏界面的情况，会有类似下面这样的提示</p>
+<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5.png" alt="无法进入"></p>
+<p>那这个情况只需要去 <code>控制器 -&gt; Wii 遥控器</code> 然后点击你要是用的模拟手柄的设置，将 <code>扩展</code> 这一项改成无就可以，看图操作</p>
+<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E4%BF%AE%E6%94%B9%E6%89%A9%E5%B1%951.png" alt="修改扩展1"></p>
+<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E4%BF%AE%E6%94%B9%E6%89%A9%E5%B1%952.png" alt="修改扩展2"></p>
+<p>现在再试试进入游戏就正常了</p>
+<p><img src="../../media/article_img/how2_use_dolphin_play_kirbywii/%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C.png" alt="正常运行"></p>
+]]></content>
+      <categories>
+        <category>星之卡比系列教程</category>
+      </categories>
+      <tags>
+        <tag>星之卡比</tag>
+        <tag>星之卡比 Wii</tag>
+        <tag>Wii 模拟器</tag>
+        <tag>Dolphin Emulator</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在线游玩 FC（小霸王、红白机）、街机游戏</title>
     <url>/posts/743f9c80/</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="../../media/article_img/online_play_nes/%E7%BD%91%E7%AB%99%E6%A0%87%E9%A2%98%E7%95%8C%E9%9D%A2.png" alt="网站标题界面"></p>
@@ -1795,34 +1823,6 @@ See android.content.Context.createConfigurationContext(Configuration).</p>
       <tags>
         <tag>游戏推荐</tag>
         <tag>FC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>动态替换 ViewPager 里面的 Fragment</title>
-    <url>/posts/6b0c894/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>最近在重写 Kirby Assistant 过程中又遇到了需要动态替换 ViewPager 的某个 Fragment 的需求，因为之前的是直接在同一个布局里暴力替换的，但是这次因为是用其他方法实现的，当然不能用以前的方法了，摸索了一段时间后终于搞定了，现在把可以用的方法放在下面</p>
-<h3 id="准备过程">准备过程</h3>
-<p>首先需要在布局中添加 ViewPager</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.viewpager.widget.ViewPager</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/main_fragment_viewpager&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p>然后给 ViewPager 写一个 ViewPagerAdapter 并且继承自 FragmentPagerAdapter</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ViewPagerAdapter</span> <span class="keyword">extends</span> <span class="title class_">FragmentPagerAdapter</span> &#123;</span><br><span class="line"><span class="comment">//其他东西</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="重写-ViewPagerAdapter">重写 ViewPagerAdapter</h3>
-<p>具体看代码的注释，有注释的都是需要注意的</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ViewPagerAdapter</span> <span class="keyword">extends</span> <span class="title class_">FragmentPagerAdapter</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> FragmentManager fm;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Fragment&gt; fragments;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; page_title;<span class="comment">//这个是对应碎片的标题，可以不需要</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">ViewPagerAdapter</span><span class="params">(FragmentManager fm, List&lt;Fragment&gt; fragments,List&lt;String&gt; page_title)</span>&#123;</span><br><span class="line">        <span class="built_in">super</span>(fm);</span><br><span class="line">        <span class="built_in">this</span>.fm=fm;</span><br><span class="line">        <span class="built_in">this</span>.fragments=fragments;</span><br><span class="line">        <span class="built_in">this</span>.page_title=page_title;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//注意这个方法，这个是配置你在哪个碎片上进行替换</span></span><br><span class="line">    <span class="meta">@NonNull</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">instantiateItem</span><span class="params">(<span class="meta">@NonNull</span> ViewGroup container, <span class="type">int</span> position)</span> &#123;</span><br><span class="line">        <span class="comment">//这里的判断说明的是在三个和第四个碎片上替换</span></span><br><span class="line">        <span class="keyword">if</span> (position == <span class="number">2</span>||position == <span class="number">3</span>)</span><br><span class="line">            removeFragment(container,position);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">super</span>.instantiateItem(container, position);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//这个方法就是通过 Tag 来判断碎片是不是原来的，如果不是就进行替换</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">removeFragment</span><span class="params">(ViewGroup container,<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">tag</span> <span class="operator">=</span> getFragmentTag(container.getId(), index);</span><br><span class="line">        <span class="type">Fragment</span> <span class="variable">fragment</span> <span class="operator">=</span> fm.findFragmentByTag(tag);</span><br><span class="line">        <span class="keyword">if</span> (fragment == <span class="literal">null</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="type">FragmentTransaction</span> <span class="variable">ft</span> <span class="operator">=</span> fm.beginTransaction();</span><br><span class="line">        ft.remove(fragment);</span><br><span class="line">        ft.commit();</span><br><span class="line">        ft = <span class="literal">null</span>;</span><br><span class="line">        fm.executePendingTransactions();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NonNull</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Fragment <span class="title function_">getItem</span><span class="params">(<span class="type">int</span> position)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> fragments.get(position);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getCount</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> fragments.size();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//注意写成这样才可以进行刷新</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getItemPosition</span><span class="params">(<span class="meta">@NonNull</span> Object object)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> PagerAdapter.POSITION_NONE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> CharSequence <span class="title function_">getPageTitle</span><span class="params">(<span class="type">int</span> position)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> page_title.get(position);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//禁止销毁view达到复用</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroyItem</span><span class="params">(<span class="meta">@NonNull</span> ViewGroup container, <span class="type">int</span> position, <span class="meta">@NonNull</span> Object object)</span> &#123;&#125;</span><br><span class="line">    <span class="comment">//获取碎片的tag</span></span><br><span class="line">    <span class="keyword">private</span> String <span class="title function_">getFragmentTag</span><span class="params">(<span class="type">int</span> viewId, <span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class&lt;FragmentPagerAdapter&gt; cls = FragmentPagerAdapter.class;</span><br><span class="line">            Class&lt;?&gt;[] parameterTypes = &#123; <span class="type">int</span>.class, <span class="type">long</span>.class &#125;;</span><br><span class="line">            <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> cls.getDeclaredMethod(<span class="string">&quot;makeFragmentName&quot;</span>,</span><br><span class="line">                    parameterTypes);</span><br><span class="line">            method.setAccessible(<span class="literal">true</span>);</span><br><span class="line">            <span class="type">String</span> <span class="variable">tag</span> <span class="operator">=</span> (String) method.invoke(<span class="built_in">this</span>, viewId, index);</span><br><span class="line">            <span class="keyword">return</span> tag;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="注意问题">注意问题</h3>
-<p>如果出现替换后出现某个碎片的布局空白了，那就设置一个 ViewPager 的缓存属性</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">main_fragment_viewpager.setOffscreenPageLimit(<span class="number">4</span>);<span class="comment">//4代表缓存4页，根据实际情况调整</span></span><br></pre></td></tr></table></figure>
-<h3 id="结尾">结尾</h3>
-<p>如果有代码什么问题可以向我提出</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>踩坑</tag>
-        <tag>Android</tag>
-        <tag>Fragment</tag>
-        <tag>ViewPager</tag>
       </tags>
   </entry>
 </search>
